@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700;900;1000&family=Source+Code+Pro&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bgBlack: #272727;
+  --divider: #707070;
+  --mainGreen: #4ECCA3;
+  --mainWhite: #EEEEEE;
+  --cardBg: #303030;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--bgBlack);
 }
 
 a {
