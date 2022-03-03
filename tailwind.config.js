@@ -3,16 +3,22 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {},
     colors: {
       'bgBlack': '#272727',
+      'mainPurple': '#A96CF8',
       'divider': '#3B3B3B',
       'mainGreen': '#4ECCA3',
       'mainWhite': '#EEEEEE',
+      'lightBg': '#F5F5DC',
       'cardBg': '#303030',
       'hoverGray': '#9A9A9A',
       'gradientBlue': '#4E91CC',
+      'lightCardHover': '#E6E6E6',
+      'lightLinkHover': '#D9D9D9',
+      'gray': 'rgb(17 24 39)',
     },
     fontFamily: {
       'mulish': 'Mulish',

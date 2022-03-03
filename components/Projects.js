@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { GoMarkGithub } from "react-icons/go"
 import { FaGlobe } from "react-icons/fa"
+import { Fragment } from "react"
 
 const Projects = () => {
 
@@ -8,7 +9,7 @@ const Projects = () => {
         {
             id: 1,
             logo: 'coinbase.png',
-            name: 'Coinbase Rebuilt Web3',
+            name: 'Coinbase Rebuild Web3',
             description: 'It is a Crypto Transaction web app similar to Coinbase made on Blockchain using thirdweb, Next.js & Sanity.io. Send crypto from one wallet to another within seconds',
             githubUrl: 'https://github.com/SanyamPunia/Coinbase-Rebuild-Web3',
             hostedUrl: 'https://coinbase-rebuild-web3.vercel.app/',
@@ -42,29 +43,31 @@ const Projects = () => {
     return (
         <div>
             <div className="mb-5">
-                <h1 className="font-mulish text-3xl font-extrabold text-mainGreen">Projects</h1>
-                <p className="font-source_code_pro text-lg text-mainWhite mt-3">Collection of few projects I made</p>
+                <h1 className="font-mulish text-3xl font-extrabold text-bgBlack dark:text-mainGreen">Projects</h1>
+                <p className="font-source_code_pro text-lg text-divider dark:text-mainWhite mt-3">Collection of few projects I made</p>
             </div>
             <div className="flex flex-col gap-5">
-                {projectInfo.map(project  => (
-                    <div className="bg-cardBg grid grid-cols-2 items-center p-4 gap-8 rounded-md transition shadow-md hover:bg-divider sm:flex sm:flex-col">
-                        <img className="rounded-md" src={`/${project.logo}`} />
-                        <div className="flex flex-col justify-between gap-3">
-                            <h1 className="text-mainGreen font-source_code_pro font-bold text-lg">{project.name}</h1>
-                            <p className="text-mainWhite font-source_code_pro text-sm">{project.description}</p>
-                            <div className="flex gap-5 text-mainWhite text-xl">
-                                <div>
-                                    <a href={project.githubUrl}><GoMarkGithub /></a>
-                                </div>
-                                <div>
-                                    <a href={project.hostedUrl}><FaGlobe /></a>
+                {projectInfo.map(project => (
+                    <Fragment key={project.id}>
+                        <div className="bg-lightCardHover dark:bg-cardBg grid grid-cols-2 items-center p-4 gap-8 rounded-md transition shadow-md hover:bg-lightLinkHover dark:hover:bg-divider sm:flex sm:flex-col">
+                            <img className="rounded-md" src={`/${project.logo}`} />
+                            <div className="flex flex-col justify-between gap-3">
+                                <h1 className="text-bgBlack dark:text-mainGreen font-source_code_pro font-bold text-lg">{project.name}</h1>
+                                <p className="text-bgBlack dark:text-mainWhite font-source_code_pro text-sm">{project.description}</p>
+                                <div className="flex gap-5 text-bgBlack dark:text-mainWhite text-xl">
+                                    <div>
+                                        <a href={project.githubUrl}><GoMarkGithub /></a>
+                                    </div>
+                                    <div>
+                                        <a href={project.hostedUrl}><FaGlobe /></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Fragment>
                 ))}
             </div>
-            <hr className="mt-28 mb-14 w-1/3 mx-auto text-divider" />
+            <hr className="mt-28 mb-14 w-1/3 mx-auto text-hoverGray dark:text-divider" />
         </div>
     )
 }
