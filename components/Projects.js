@@ -2,6 +2,8 @@ import Image from "next/image"
 import { GoMarkGithub } from "react-icons/go"
 import { FaGlobe } from "react-icons/fa"
 import { Fragment } from "react"
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 const Projects = () => {
 
@@ -43,23 +45,25 @@ const Projects = () => {
     return (
         <div>
             <div className="mb-5">
-                <h1 className="font-mulish text-3xl font-extrabold text-bgBlack dark:text-mainGreen">Projects</h1>
+                <h1 className="font-mulish text-3xl font-extrabold text-bgBlack dark:text-mainGreen">Featured Projects</h1>
                 <p className="font-source_code_pro text-lg text-divider dark:text-mainWhite mt-3">Collection of few projects I made</p>
             </div>
             <div className="flex flex-col gap-5">
                 {projectInfo.map(project => (
                     <Fragment key={project.id}>
                         <div className="bg-lightCardHover dark:bg-cardBg grid grid-cols-2 items-center p-4 gap-8 rounded-md transition shadow-md hover:bg-lightLinkHover dark:hover:bg-divider sm:flex sm:flex-col">
-                            <img className="rounded-md" src={`/${project.logo}`} />
+                            <Zoom zoomMargin={150}>
+                                <img className="rounded-md" src={`/${project.logo}`} />
+                            </Zoom>
                             <div className="flex flex-col justify-between gap-3">
                                 <h1 className="text-bgBlack dark:text-mainGreen font-source_code_pro font-bold text-lg">{project.name}</h1>
                                 <p className="text-bgBlack dark:text-mainWhite font-source_code_pro text-sm">{project.description}</p>
                                 <div className="flex gap-5 text-bgBlack dark:text-mainWhite text-xl">
                                     <div>
-                                        <a href={project.githubUrl}><GoMarkGithub /></a>
+                                        <a target="_blank" href={project.githubUrl}><GoMarkGithub /></a>
                                     </div>
                                     <div>
-                                        <a href={project.hostedUrl}><FaGlobe /></a>
+                                        <a target="_blank" href={project.hostedUrl}><FaGlobe /></a>
                                     </div>
                                 </div>
                             </div>

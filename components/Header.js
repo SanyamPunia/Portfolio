@@ -1,33 +1,62 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaMoon, FaSun } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
+import { useRouter } from 'next/router'
 
 const Header = () => {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false);
+  const router = useRouter();
+
+  const navLinks = [
+    {
+      id: 1,
+      routeName: 'Home',
+      route: '/',
+    },
+    {
+      id: 2,
+      routeName: 'About',
+      route: '/about',
+    },
+    {
+      id: 3,
+      routeName: 'Music',
+      route: '/music',
+    },
+    {
+      id: 4,
+      routeName: 'Blogs',
+      route: '/blogs'
+    }
+  ]
+
+  useEffect(() => setMounted(true), []);
 
   return (
     <div className="items-center flex justify-between py-4 font-bold text-bgBlack dark:text-mainWhite border-b-1 border-lightLinkHover dark:border-divider">
       <div className="flex text-md md:hidden">
-        <a className="px-3 py-1 rounded font-mulish cursor-pointer transition hover:bg-lightLinkHover dark:hover:bg-divider" href="/about">About</a>
-        <a className="px-3 py-1 rounded font-mulish cursor-pointer transition hover:bg-lightLinkHover dark:hover:bg-divider" href="/music">Music</a>
-        <a className="px-3 py-1 rounded font-mulish cursor-pointer transition hover:bg-lightLinkHover dark:hover:bg-divider" href="/dashboard">Dashboard</a>
-        <a className="px-3 py-1 rounded font-mulish cursor-pointer transition hover:bg-lightLinkHover dark:hover:bg-divider" href="/contact">Contact Me</a>
+        {navLinks.map((link) => (
+          <a className={`${router.pathname === link.route ? "text-mainGreen" : 'null'} px-3 py-1 rounded font-mulish cursor-pointer transition hover:bg-lightLinkHover dark:hover:bg-divider`} key={link.id} href={link.route}>
+            {link.routeName}
+          </a>
+        ))}
       </div>
 
-      <div className='flex items-center'>
-        {/* <a href="/" className="px-2 py-1 font-mulish text-lg cursor-pointer">Sanyam</a> */}
-        <div className="switch_box box_3" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-          <div className="toggle_switch">
-            <input type="checkbox" className="switch_3" />
-            <svg className="checkbox" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 80">
-              <path className="outer-ring" d="M41.534 9h88.932c17.51 0 31.724 13.658 31.724 30.482 0 16.823-14.215 30.48-31.724 30.48H41.534c-17.51 0-31.724-13.657-31.724-30.48C9.81 22.658 24.025 9 41.534 9z" fill="none" stroke="#233043" strokeWidth="3" strokeLinecap="square" strokeMiterlimit="3" />
-              <path className="is_checked" d="M17 39.482c0-12.694 10.306-23 23-23s23 10.306 23 23-10.306 23-23 23-23-10.306-23-23z" />
-              <path className="is_unchecked" d="M132.77 22.348c7.705 10.695 5.286 25.617-5.417 33.327-2.567 1.85-5.38 3.116-8.288 3.812 7.977 5.03 18.54 5.024 26.668-.83 10.695-7.706 13.122-22.634 5.418-33.33-5.855-8.127-15.88-11.474-25.04-9.23 2.538 1.582 4.806 3.676 6.66 6.25z" />
-            </svg>
-          </div>
-        </div>
-      </div>
+      {mounted && (
+        <>
+          {theme === 'dark' ? (
+            <div className='text-xl'>
+              <FaSun className='p-1.5 w-9 h-9 rounded transition ring-mainGreen	 hover:ring cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
+            </div>
+          ) : (
+            <div className='text-xl'>
+              <FaMoon className='p-1.5 w-9 h-9 rounded transition ring-mainPurple hover:ring cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
+            </div>
+          )}
+        </>
+      )}
 
       <div className='hidden md:inline-block'>
         <Menu as="div" className="relative inline-block text-left">
@@ -49,23 +78,23 @@ const Header = () => {
             <Menu.Items className=" bg-lightCardHover dark:bg-bgBlack origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-black ring-opacity-5 focus:outline-none">
               <div className="p-2 flex flex-col">
                 <Menu.Item>
+                  <a href="/" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Home</a>
+                </Menu.Item>
+                <Menu.Item>
                   <a href="/about" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>About</a>
                 </Menu.Item>
                 <Menu.Item>
                   <a href="/music" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Music</a>
                 </Menu.Item>
                 <Menu.Item>
-                  <a href="/dashboard" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Dashboard</a>
-                </Menu.Item>
-                <Menu.Item>
-                  <a href="/contact" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Contact Me</a>
+                  <a href="/blogs" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Blogs</a>
                 </Menu.Item>
               </div>
             </Menu.Items>
           </Transition>
         </Menu>
       </div>
-    </div >
+    </div>
   )
 }
 

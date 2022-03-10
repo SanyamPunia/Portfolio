@@ -19,6 +19,9 @@ module.exports = {
       'lightCardHover': '#E6E6E6',
       'lightLinkHover': '#D9D9D9',
       'gray': 'rgb(17 24 39)',
+      'blogDescriptionGray': '#ABABAB',
+      'blogDate': '#727272',
+      'blogViews': '#8E8E8E',
     },
     fontFamily: {
       'mulish': 'Mulish',
@@ -38,12 +41,12 @@ module.exports = {
       '14': '3.4rem',
     },
     screens: {
-      '2xl': {'max': '1535px'},
-      'xl': {'max': '1179px'},
-      'lg': {'max': '1023px'},
-      'md': {'max': '767px'},
-      'sm': {'max': '639px'},
+      '2xl': { 'max': '1535px' },
+      'xl': { 'max': '1179px' },
+      'lg': { 'max': '1023px' },
+      'md': { 'max': '767px' },
+      'sm': { 'max': '639px' },
     }
   },
-plugins: [],
+  plugins: [],
 }
