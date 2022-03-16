@@ -15,7 +15,6 @@ export default function Music() {
             <div className="my-28">
                 <div className="mb-5">
                     <h1 className="font-mulish text-4xl font-extrablack text-bgBlack dark:text-mainGreen leading-14">Music</h1>
-                    {/* <p className="font-source_code_pro text-base text-bgBlack dark:text-mainWhite">Listen to some of my most recent drops!</p> */}
                 </div>
                 <div className="flex flex-col gap-6 mb-10">
                     <p className="font-source_code_pro text-base text-bgBlack dark:text-mainWhite">2020 was the year when I decided to put my music out on the internet. Uploading it to <a target="_blank" className="text-mainPurple dark:text-mainGreen transition dark:hover:text-mainWhite" href="https://soundcloud.com/prodmxle">SoundCloud</a>, <a target="_blank" className="text-mainPurple dark:text-mainGreen transition dark:hover:text-mainWhite" href="https://open.spotify.com/artist/2QbtOIjb8mUIsnCNqvyWAW">Spotify</a> and other platforms helped me gather bunch of people that enjoyed listening to my music.</p>

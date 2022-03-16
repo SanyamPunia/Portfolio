@@ -14,6 +14,11 @@ export default {
       type: 'string'
     },
     {
+      title: 'Publish Date',
+      name: 'publishDate',
+      type: 'date'
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -52,6 +57,11 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'exampleUsage',
+      title: 'Example usage',
+      type: 'code',
+    }
   ],
 
   preview: {

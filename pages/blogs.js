@@ -1,24 +1,63 @@
 import Link from "next/link";
+import { Fragment } from "react";
 import Header from "../components/Header"
 import { sanityClient, urlFor } from "../sanity"
 import post from "../studio/schemas/post";
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import routeName from "../helpers/routeName";
 
 export default function Blogs({ posts }) {
-    console.log(posts[0].author.name);
-    return (
-        <div className="mx-auto  w-1/3 2xl:w-2/4 lg:w-4/5">
-            <Header />
 
-            <div>
-                {posts.map((post) => (
-                    <Link key={post._id} href={`/post/${post.slug.current}`}>
-                        <div>
-                            <img src={urlFor(post.mainImage)} alt="" />
+    const router = useRouter();
+    console.log(router);
+    // const pathName = router.pathName.();
+    // const 
+
+
+    console.log(posts[0]);
+
+    return (
+        <>
+            <Head>
+                <title>Sanyam | {routeName()} </title>
+            </Head>
+            <div className="mx-auto  w-1/3 2xl:w-2/4 lg:w-4/5">
+                <Header />
+
+                <div className="mt-28">
+                    <h1 className="mb-5 font-mulish text-4xl font-extrablack text-bgBlack dark:text-mainGreen leading-14">Blogs</h1>
+                    <p className="mb-5 font-source_code_pro text-base text-bgBlack dark:text-mainWhite">I started writing blogs and articles in 2022, since then I am writing about various technologies and experiences of my web developer journey.</p>
+                    <p className="font-source_code_pro text-base text-bgBlack dark:text-mainWhite">All the articles here are work of my own research and none of them is a pure copy paste from any other site.</p>
+                </div>
+
+                <hr className="my-14 w-1/3 mx-auto border-lightLinkHover dark:text-divider" />
+
+                <div>
+                    {posts.map((post) => (
+                        <div key={post._id} className="dark:bg-cardBg bg-lightCardHover my-5 p-4 rounded-md">
+                            <div className="flex justify-between mb-2">
+                                <div className="flex gap-1 flex-col">
+                                    <Link key={post._id} href={`/blogs/${post.slug.current}`}>
+                                        <h1 className="cursor-pointer transition dark:hover:text-mainGreen font-source_code_pro text-xl text-bgBlack dark:text-mainWhite">{post.title}</h1>
+                                    </Link>
+                                    {post.publishDate &&
+                                        <h1 className="font-source_code_pro text-bgBlack dark:text-blogDate">{post.publishDate}</h1>
+                                    }
+                                </div>
+                                <div>
+                                    <h1 className="font- font-source_code_pro text-bgBlack dark:text-blogViews">views</h1>
+                                </div>
+                            </div>
+                            <div>
+                                <h1 className="font-source_code_pro text-bgBlack dark:text-blogDescriptionGray">{post.description}</h1>
+                                <h1 className="font-source_code_pro text-bgBlack dark:text-blogDescriptionGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </h1>
+                            </div>
                         </div>
-                    </Link>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
@@ -32,6 +71,7 @@ export const getServerSideProps = async () => {
       },
       description,
       mainImage,
+      publishDate,
       slug
       }`;
 
