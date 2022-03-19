@@ -30,5 +30,19 @@ a {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
+::-webkit-scrollbar-track {
+  background: var(--bgBlack); 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--mainGreen); 
+}
 
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cardBg);
+}

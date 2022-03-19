@@ -8,13 +8,6 @@ import { useRouter } from 'next/router'
 import routeName from "../helpers/routeName";
 
 export default function Blogs({ posts }) {
-
-    const router = useRouter();
-    console.log(router);
-    // const pathName = router.pathName.();
-    // const 
-
-
     console.log(posts[0]);
 
     return (
@@ -35,7 +28,7 @@ export default function Blogs({ posts }) {
 
                 <div>
                     {posts.map((post) => (
-                        <div key={post._id} className="dark:bg-cardBg bg-lightCardHover my-5 p-4 rounded-md">
+                        <div key={post._id} className="transition shadow-md hover:bg-lightLinkHover dark:hover:bg-divider dark:bg-cardBg bg-lightCardHover my-5 p-4 rounded-md">
                             <div className="flex justify-between mb-2">
                                 <div className="flex gap-1 flex-col">
                                     <Link key={post._id} href={`/blogs/${post.slug.current}`}>
@@ -51,7 +44,6 @@ export default function Blogs({ posts }) {
                             </div>
                             <div>
                                 <h1 className="font-source_code_pro text-bgBlack dark:text-blogDescriptionGray">{post.description}</h1>
-                                <h1 className="font-source_code_pro text-bgBlack dark:text-blogDescriptionGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </h1>
                             </div>
                         </div>
                     ))}

@@ -55,6 +55,7 @@ const Projects = () => {
                             <Zoom zoomMargin={150}>
                                 <img className="rounded-md" src={`/${project.logo}`} />
                             </Zoom>
+
                             <div className="flex flex-col justify-between gap-3">
                                 <h1 className="text-bgBlack dark:text-mainGreen font-source_code_pro font-bold text-lg">{project.name}</h1>
                                 <p className="text-bgBlack dark:text-mainWhite font-source_code_pro text-sm">{project.description}</p>
