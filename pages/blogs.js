@@ -28,7 +28,7 @@ export default function Blogs({ posts }) {
 
                 <div>
                     {posts.map((post) => (
-                        <div key={post._id} className="transition shadow-md hover:bg-lightLinkHover dark:hover:bg-divider dark:bg-cardBg bg-lightCardHover my-5 p-4 rounded-md">
+                        <div key={post._id} className="transition shadow-md hover:bg-lightLinkHover dark:hover:bg-divider dark:bg-cardBg bg-mainWhite my-5 p-4 rounded-md">
                             <div className="flex justify-between mb-2">
                                 <div className="flex gap-1 flex-col">
                                     <Link key={post._id} href={`/blogs/${post.slug.current}`}>

@@ -51,7 +51,7 @@ const Projects = () => {
             <div className="flex flex-col gap-5">
                 {projectInfo.map(project => (
                     <Fragment key={project.id}>
-                        <div className="bg-lightCardHover dark:bg-cardBg grid grid-cols-2 items-center p-4 gap-8 rounded-md transition shadow-md hover:bg-lightLinkHover dark:hover:bg-divider sm:flex sm:flex-col">
+                        <div className="bg-mainWhite dark:bg-cardBg grid grid-cols-2 items-center p-4 gap-8 rounded-md transition shadow-md hover:bg-lightLinkHover dark:hover:bg-divider sm:flex sm:flex-col">
                             <Zoom zoomMargin={150}>
                                 <img className="rounded-md" src={`/${project.logo}`} />
                             </Zoom>
