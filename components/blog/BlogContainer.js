@@ -10,7 +10,9 @@ const BlogContainer = (props) => {
         date={props.date}
       />
 
-      <img className="mb-4 w-full rounded" src={props.image} alt="" />
+      {props.image &&
+        <img className="mb-4 w-full rounded" src={props.image} alt="" />
+      }
 
       <Blog value={props.bodyArray} />
 

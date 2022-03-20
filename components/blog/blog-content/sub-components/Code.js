@@ -7,11 +7,11 @@ Refractor.registerLanguage(jsx)
 
 export function Code(props) {
     return (
-        <>
+        <div className='my-4'>
             <SyntaxHighlighter language='javascript' style={atomOneDark}>
                 {props.value}
             </SyntaxHighlighter>
-        </>
+        </div>
     )
 }
 

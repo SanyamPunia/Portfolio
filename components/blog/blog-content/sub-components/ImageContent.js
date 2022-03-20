@@ -3,7 +3,7 @@ import { urlFor } from "../../../../sanity"
 const ImageContent = (props) => {
     return (
         <>
-            <img src={urlFor(props.value).url()} />
+            <img className="w-full my-4 rounded" src={urlFor(props.value).url()} />
         </>
     )
 }
