@@ -39,9 +39,11 @@ const Header = () => {
     <div className="items-center flex justify-between py-4 font-bold text-bgBlack dark:text-mainWhite border-b-1 border-lightLinkHover dark:border-divider">
       <div className="flex text-md md:hidden">
         {navLinks.map((link) => (
-          <a className={`${router.pathname === link.route ? "text-mainGreen" : 'null'} px-3 py-1 rounded font-mulish cursor-pointer transition hover:bg-lightLinkHover dark:hover:bg-divider`} key={link.id} href={link.route}>
-            {link.routeName}
-          </a>
+          <Link key={link.id} href={link.route}>
+            <a className={`${router.pathname === link.route ? "text-mainGreen" : 'null'} px-3 py-1 rounded font-mulish cursor-pointer transition hover:bg-lightLinkHover dark:hover:bg-divider`}>
+              {link.routeName}
+            </a>
+          </Link>
         ))}
       </div>
 
@@ -79,16 +81,24 @@ const Header = () => {
             <Menu.Items className=" bg-lightCardHover dark:bg-bgBlack origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-black ring-opacity-5 focus:outline-none">
               <div className="p-2 flex flex-col">
                 <Menu.Item>
-                  <a href="/" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Home</a>
+                  <Link href="/">
+                    <a className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Home</a>
+                  </Link>
                 </Menu.Item>
                 <Menu.Item>
-                  <a href="/about" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>About</a>
+                  <Link href="/about">
+                    <a className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>About</a>
+                  </Link>
                 </Menu.Item>
                 <Menu.Item>
-                  <a href="/music" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Music</a>
+                  <Link href="/music">
+                    <a className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Music</a>
+                  </Link>
                 </Menu.Item>
                 <Menu.Item>
-                  <a href="/blogs" className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Blogs</a>
+                  <Link href="/blogs">
+                    <a className='font-mulish p-3 text-lg transition rounded-md hover:bg-lightLinkHover dark:hover:bg-[#363636]'>Blogs</a>
+                  </Link>
                 </Menu.Item>
               </div>
             </Menu.Items>
