@@ -3,6 +3,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { FaBars, FaMoon, FaSun } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
+import Link from "next/link"
 
 const Header = () => {
   const { theme, setTheme } = useTheme()

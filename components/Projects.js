@@ -61,10 +61,10 @@ const Projects = () => {
                                 <p className="text-bgBlack dark:text-mainWhite font-source_code_pro text-sm">{project.description}</p>
                                 <div className="flex gap-5 text-bgBlack dark:text-mainWhite text-xl">
                                     <div>
-                                        <a target="_blank" href={project.githubUrl}><GoMarkGithub /></a>
+                                        <a rel="noreferrer" target="_blank" href={project.githubUrl}><GoMarkGithub /></a>
                                     </div>
                                     <div>
-                                        <a target="_blank" href={project.hostedUrl}><FaGlobe /></a>
+                                        <a rel="noreferrer" target="_blank" href={project.hostedUrl}><FaGlobe /></a>
                                     </div>
                                 </div>
                             </div>

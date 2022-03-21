@@ -15,13 +15,13 @@ const Landing = () => {
             </div>
             <div className="mt-6 flex gap-5 text-2xl text-mainWhite">
                 <div className="bg-cardBg p-2 rounded-md transition hover:bg-divider hover:text-[#1DA1F2]">
-                    <a target="_blank" href="https://twitter.com/prodmxle"><FaTwitter /></a>
+                    <a rel="noreferrer" target="_blank" href="https://twitter.com/prodmxle"><FaTwitter /></a>
                 </div>
                 <div className="bg-cardBg p-2 rounded-md transition hover:bg-divider">
-                    <a target="_blank" href="https://github.com/SanyamPunia"><GoMarkGithub /></a>
+                    <a rel="noreferrer" target="_blank" href="https://github.com/SanyamPunia"><GoMarkGithub /></a>
                 </div>
                 <div className="bg-cardBg p-2 rounded-md transition hover:bg-divider hover:text-[#2867B2]">
-                    <a target="_blank" href="https://www.linkedin.com/in/sanyampunia/"><FaLinkedin /></a>
+                    <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/sanyampunia/"><FaLinkedin /></a>
                 </div>
             </div>
             <hr className="my-28 w-1/3 mx-auto border-lightLinkHover dark:text-divider" />
