@@ -17,7 +17,7 @@ const BlogPage = ({ post }) => {
       <main className="mx-auto  w-1/3 2xl:w-2/4 lg:w-4/5">
         <Header />
 
-        <BlogContainer 
+        <BlogContainer
           image={post.mainImage && urlFor(post.mainImage).url()}
           title={post.title}
           description={post.description}

@@ -1,10 +1,12 @@
 import { urlFor } from "../../../../sanity"
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 const ImageContent = (props) => {
     return (
-        <>
-            <img className="w-full my-4 rounded" src={urlFor(props.value).url()} />
-        </>
+        <Zoom>
+            <img className="w-full my-3 rounded" src={urlFor(props.value).url()} />
+        </Zoom>
     )
 }
 

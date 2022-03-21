@@ -14,8 +14,9 @@ const BlogContainer = (props) => {
         <img className="mb-4 w-full rounded" src={props.image} alt="" />
       }
 
-      <Blog value={props.bodyArray} />
+      <hr className="my-10 w-1/3 mx-auto border-lightLinkHover dark:text-divider" />
 
+      <Blog value={props.bodyArray} />
     </div>
   )
 }

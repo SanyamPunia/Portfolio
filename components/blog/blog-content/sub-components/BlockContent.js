@@ -4,8 +4,9 @@ const BlockContent = (props) => {
     <div>
       <h1
         className={
-          `${props.style === 'h1' && 'text-mainWhite text-3xl font-mulish font-extrabold mb-3'}
-           ${props.style === 'normal' && 'font-mulish text-blogDescriptionGray text-lg dark:text-blogDescriptionGray'}`
+          `${props.style === 'h1' && 'text-bgBlack dark:text-mainWhite text-3xl font-mulish font-extrabold mt-14'}
+           ${props.style === 'normal' && 'font-mulish text-divider text-md dark:text-blogDescriptionGray my-5'}
+           ${props.style === 'h2' && 'font-mulish text-mainGreen text-xl'}`
         }>
         {props.value}
       </h1>
