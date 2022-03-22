@@ -49,11 +49,12 @@ const Header = () => {
 
       {mounted && (
         <>
-          {theme === 'dark' ? (
+          {theme === 'dark' && (
             <div className='text-xl'>
               <FaSun className='p-1.5 w-9 h-9 rounded transition ring-mainGreen	 hover:ring cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
             </div>
-          ) : (
+          )}
+          {theme === 'light' && (
             <div className='text-xl'>
               <FaMoon className='p-1.5 w-9 h-9 rounded transition ring-mainPurple hover:ring cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
             </div>
