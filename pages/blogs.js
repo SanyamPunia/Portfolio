@@ -32,7 +32,7 @@ export default function Blogs({ posts }) {
                             <div className="flex justify-between mb-2">
                                 <div className="flex gap-1 flex-col">
                                     <Link key={post._id} href={`/blogs/${post.slug.current}`}>
-                                        <h1 className="cursor-pointer transition dark:hover:text-mainGreen font-source_code_pro text-xl text-bgBlack dark:text-mainWhite">{post.title}</h1>
+                                        <h1 className="cursor-pointer transition dark:hover:text-mainGreen font-mulish text-xl text-bgBlack dark:text-mainWhite">{post.title}</h1>
                                     </Link>
                                     {post.publishDate &&
                                         <h1 className="font-source_code_pro text-bgBlack dark:text-blogDate">{post.publishDate}</h1>

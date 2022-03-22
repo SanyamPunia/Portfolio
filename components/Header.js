@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import Link from "next/link"
 
 const Header = () => {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme('dark')
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
 
