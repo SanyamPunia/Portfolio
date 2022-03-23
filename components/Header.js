@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import Link from "next/link"
 
 const Header = () => {
-  const { theme, setTheme } = useTheme('dark')
+  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
 
@@ -34,6 +34,7 @@ const Header = () => {
   ]
 
   useEffect(() => setMounted(true), []);
+  if (!mounted) return null
 
   return (
     <div className="items-center flex justify-between py-4 font-bold text-bgBlack dark:text-mainWhite border-b-1 border-lightLinkHover dark:border-divider">
@@ -49,16 +50,13 @@ const Header = () => {
 
       {mounted && (
         <>
-          {theme === 'dark' && (
+          {theme === 'dark' ? (
             <div className='text-xl'>
               <FaSun className='p-1.5 w-9 h-9 rounded transition ring-mainGreen	 hover:ring cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
             </div>
-          )}
-          {theme === 'light' && (
-            <div className='text-xl'>
-              <FaMoon className='p-1.5 w-9 h-9 rounded transition ring-mainPurple hover:ring cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
-            </div>
-          )}
+          ) :
+            <FaMoon className='p-1.5 w-9 h-9 rounded transition ring-mainPurple hover:ring cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
+          }
         </>
       )}
 
