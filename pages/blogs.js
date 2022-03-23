@@ -20,8 +20,9 @@ export default function Blogs({ posts }) {
 
                 <div className="mt-28">
                     <h1 className="mb-5 font-mulish text-4xl font-extrablack text-bgBlack dark:text-mainGreen leading-14">Blogs</h1>
-                    <p className="mb-5 font-source_code_pro text-base text-bgBlack dark:text-mainWhite">I started writing blogs and articles in 2022, since then I am writing about various technologies and experiences of my web developer journey.</p>
-                    <p className="font-source_code_pro text-base text-bgBlack dark:text-mainWhite">All the articles here are work of my own research and none of them is a pure copy paste from any other site.</p>
+                    <p className="mb-5 font-source_code_pro text-base text-bgBlack dark:text-mainWhite">I started writing blogs and articles in november 2021, since then I am writing about various technologies and experiences of my web developer journey.</p>
+                    <p className="mb-5 font-source_code_pro text-base text-bgBlack dark:text-mainWhite">All the articles here are work of my own research and none of them is a pure copy paste from any other site.</p>
+                    <p className="font-source_code_pro text-base text-bgBlack dark:text-mainWhite">You can read my other articles on <a className="transition dark:text-mainGreen text-mainPurple dark:hover:text-mainWhite" href="https://medium.com/@prodmxle">medium</a>.</p>
                 </div>
 
                 <hr className="my-14 w-1/3 mx-auto border-lightLinkHover dark:text-divider" />
