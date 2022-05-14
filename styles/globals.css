@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --bgBlack: #1f1f1f;
+  --bgBlack: #242424;
   --divider: #707070;
   --mainGreen: #4ecca3;
   --mainWhite: #eeeeee;
@@ -28,6 +28,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.list-item {
+  line-height: 0.9;
+}
+
+.list-item-stack {
+  line-height: 1.5;
+  display: list-item;
 }
 
 ::-webkit-scrollbar {

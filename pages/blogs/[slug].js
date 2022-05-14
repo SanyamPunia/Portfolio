@@ -6,7 +6,7 @@ import BlogContainer from "../../components/blog/BlogContainer"
 
 const BlogPage = ({ post }) => {
   const bodyArray = post.body;
-  console.log(bodyArray);
+  console.log(post);
 
   return (
     <>
