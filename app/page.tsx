@@ -1,12 +1,16 @@
-import { Manrope } from '@next/font/google'
-import Header from './Header'
+import React from "react";
+import { Manrope } from "@next/font/google";
+import Divider from "components/Divider";
+import Hero from "app/Hero";
 
-const manrope = Manrope()
+const manrope = Manrope();
 
 export default function Home() {
   return (
     <div className={manrope.className}>
-      <Header />
+      <Divider />
+      <Hero />
+      <Divider />
     </div>
-  )
+  );
 }
