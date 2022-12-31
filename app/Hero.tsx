@@ -1,3 +1,6 @@
+"use client";
+
+
 import { Manrope } from "@next/font/google";
 import Image from "next/image";
 

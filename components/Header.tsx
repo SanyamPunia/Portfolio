@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { Poppins } from "@next/font/google";
 import { usePathname } from "next/navigation";
+import { navLinks } from "lib/nav-links";
 import ClockWidget from "components/ClockWidget";
 
 type Props = {};
@@ -11,29 +12,6 @@ type Props = {};
 const poppins = Poppins({
   weight: "400",
 });
-
-const navLinks = [
-  {
-    id: 1,
-    routeName: "About",
-    route: "/",
-  },
-  {
-    id: 2,
-    routeName: "Work",
-    route: "/work",
-  },
-  {
-    id: 3,
-    routeName: "Music",
-    route: "/music",
-  },
-  {
-    id: 4,
-    routeName: "Blogs",
-    route: "/blogs",
-  },
-];
 
 const Header = (props: Props) => {
   const pathname = usePathname();
