@@ -6,6 +6,8 @@ import { Poppins } from "@next/font/google";
 import { usePathname } from "next/navigation";
 import { navLinks } from "lib/nav-links";
 import ClockWidget from "components/ClockWidget";
+import IconSet from "app/IconSet";
+import { icons } from "lib/social-icons";
 
 type Props = {};
 
@@ -18,7 +20,7 @@ const Header = (props: Props) => {
 
   return (
     <nav className="mt-32">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center md:text-center">
         {/* LEFT CONTAINER */}
         <div className="space-y-3.5">
           {/* AVATAR */}
@@ -54,8 +56,13 @@ const Header = (props: Props) => {
           </div>
         </div>
 
-        {/* RIGHT CONTAINER */}
-        <ClockWidget />
+        <div className="space-y-3.5">
+          {/* RIGHT CONTAINER */}
+          <ClockWidget />
+
+          {/* ICON SET */}
+          <IconSet icons={icons} />
+        </div>
       </div>
     </nav>
   );

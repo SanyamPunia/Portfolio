@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import IconSet from "app/IconSet";
 import { getDateTime } from "lib/util/get-date-time";
-import { icons } from "lib/social-icons";
 
 type Props = {};
 
@@ -23,7 +21,6 @@ const ClockWidget = (props: Props) => {
         <p className="text-lg">{formattedDate}</p>
         <p className="text-lg">{formattedDay}</p>
       </div>
-      <IconSet icons={icons} />
     </div>
   );
 };
