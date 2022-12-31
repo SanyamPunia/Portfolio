@@ -16,7 +16,7 @@ const Footer = (props: Props) => {
   };
 
   return (
-    <div className="flex justify-between text-[#646464] mb-24 tracking-wide">
+    <div className="flex justify-between text-[#646464] mb-24 tracking-wide sm:flex-col sm:gap-4">
       <div className="space-y-4">
         <p
           className="footer-item"

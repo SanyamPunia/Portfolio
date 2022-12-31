@@ -8,6 +8,7 @@ import { navLinks } from "lib/nav-links";
 import ClockWidget from "components/ClockWidget";
 import IconSet from "app/IconSet";
 import { icons } from "lib/social-icons";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -20,11 +21,11 @@ const Header = (props: Props) => {
 
   return (
     <nav className="mt-32">
-      <div className="flex justify-between items-center md:text-center">
+      <div className="flex justify-between items-center md:flex-col md:text-center">
         {/* LEFT CONTAINER */}
         <div className="space-y-3.5">
           {/* AVATAR */}
-          <div className="border border-gray-800 relative h-12 w-12 rounded-full bg-gradient-to-r from-[#071127] to-[#1c0942]">
+          <div className="border border-gray-800 relative h-12 w-12 rounded-full bg-gradient-to-r from-[#071127] to-[#1c0942] md:mx-auto">
             <Image
               src="/assets/pfp1.png"
               fill
@@ -56,8 +57,8 @@ const Header = (props: Props) => {
           </div>
         </div>
 
+        {/* RIGHT CONTAINER */}
         <div className="space-y-3.5">
-          {/* RIGHT CONTAINER */}
           <ClockWidget />
 
           {/* ICON SET */}

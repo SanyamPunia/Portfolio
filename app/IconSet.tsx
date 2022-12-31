@@ -19,8 +19,6 @@ const iconGradientBgs = [
 ];
 
 const IconSet = ({ icons }: Props) => {
-  console.log(icons);
-
   return (
     <div className="flex gap-5 w-full">
       <>
