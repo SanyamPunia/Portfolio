@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 type Props = {};
 
 const Divider = (props: Props) => {

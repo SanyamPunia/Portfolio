@@ -15,7 +15,7 @@ const ClockWidget = (props: Props) => {
   const [formattedDay, formattedDate, formattedTime] = time;
 
   return (
-    <div className="text-primary-white text-right space-y-3.5 md:hidden">
+    <div className="text-primary-white text-right space-y-3.5 hidden md:block">
       <h1 className="text-4xl">{formattedTime}</h1>
       <div className="text-primary-gray">
         <p className="text-lg">{formattedDate}</p>

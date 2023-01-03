@@ -8,6 +8,7 @@ import { navLinks } from "lib/nav-links";
 import ClockWidget from "components/ClockWidget";
 import IconSet from "app/IconSet";
 import { icons } from "lib/social-icons";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 type Props = {};
@@ -20,12 +21,12 @@ const Header = (props: Props) => {
   const pathname = usePathname();
 
   return (
-    <nav className="mt-32">
-      <div className="flex justify-between items-center md:flex-col md:text-center">
+    <nav className="px-8 max-w-3xl mx-auto mt-32">
+      <div className="flex justify-between items-center flex-col text-center md:flex-row md:text-left">
         {/* LEFT CONTAINER */}
         <div className="space-y-3.5">
           {/* AVATAR */}
-          <div className="border border-gray-800 relative h-12 w-12 rounded-full bg-gradient-to-r from-[#071127] to-[#1c0942] md:mx-auto">
+          <div className="border border-gray-800 relative h-12 w-12 rounded-full bg-gradient-to-r from-[#071127] to-[#1c0942] mx-auto md:mx-0">
             <Image
               src="/assets/pfp1.png"
               fill
@@ -46,12 +47,20 @@ const Header = (props: Props) => {
               <p
                 className={`${
                   pathname === link.route
-                    ? `text-primary-gray-highlighted underline`
+                    ? `text-primary-gray-highlighted`
                     : "null"
                 } cursor-pointer transition-all hover:text-primary-gray-highlighted`}
                 key={link.id}
               >
-                {link.routeName}
+                <Link href={link.route} className="relative">
+                  {link.route === pathname && (
+                    <motion.span
+                      layoutId="underline"
+                      className="absolute left-0 top-full block h-[2px] w-full bg-primary-gray-highlighted"
+                    />
+                  )}
+                  {link.routeName}
+                </Link>
               </p>
             ))}
           </div>
@@ -62,7 +71,8 @@ const Header = (props: Props) => {
           <ClockWidget />
 
           {/* ICON SET */}
-          <IconSet icons={icons} />
+          {/* icons={icons} pass as prop */}
+          <IconSet />
         </div>
       </div>
     </nav>
