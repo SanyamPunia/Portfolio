@@ -5,6 +5,8 @@ interface ProjectType {
   tags: string[];
   bgImage: string;
   logoImage: string;
+  githubUrl: string;
+  previewUrl?: string;
 }
 
 export const projectList: ProjectType[] = [
@@ -16,6 +18,8 @@ export const projectList: ProjectType[] = [
     tags: ["Next.js", "Firebase", "Vercel"],
     bgImage: "skillup-preview",
     logoImage: "skillup-logo",
+    githubUrl: "https://github.com/SanyamPunia/Skill-Up-NCU",
+    previewUrl: "",
   },
   {
     id: 2,
@@ -25,6 +29,8 @@ export const projectList: ProjectType[] = [
     tags: ["React.js", "Framer Motion", "TypeScript", "Vite"],
     bgImage: "gymlanding-preview",
     logoImage: "gym-logo",
+    githubUrl: "https://github.com/SanyamPunia/Gym-Landing-Page",
+    previewUrl: "",
   },
   {
     id: 3,
@@ -34,6 +40,8 @@ export const projectList: ProjectType[] = [
     tags: ["Svelte", "SvelteKit", "Supabase", "Three.js", "Firebase"],
     bgImage: "suparadio-preview",
     logoImage: "suparadio-logo",
+    githubUrl: "https://github.com/SanyamPunia/Supa-Radio",
+    previewUrl: "",
   },
   {
     id: 4,
@@ -43,5 +51,7 @@ export const projectList: ProjectType[] = [
     tags: ["Next.js", "Firebase", "Authentication"],
     bgImage: "nextblog-preview",
     logoImage: "nextblog-logo",
+    githubUrl: "https://github.com/SanyamPunia/next-blog",
+    previewUrl: "",
   },
 ];

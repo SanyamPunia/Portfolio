@@ -4,6 +4,7 @@ import { FaHeart } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { scrollToTop } from "lib/util/scroll-to-top";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -12,7 +13,17 @@ const Footer = (props: Props) => {
 
   return (
     <div className="px-8 max-w-3xl mx-auto">
-      <div className="flex justify-between text-[#646464] mb-24 tracking-wide flex-col gap-4 sm:flex-row">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="flex justify-between text-[#646464] mb-24 tracking-wide flex-col gap-4 sm:flex-row"
+      >
         <div className="space-y-4">
           <p className="footer-item">
             <Link onClick={pathname === "/" ? scrollToTop : undefined} href="/">
@@ -47,7 +58,7 @@ const Footer = (props: Props) => {
             by Sanyam
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

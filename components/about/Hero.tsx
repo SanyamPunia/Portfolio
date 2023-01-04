@@ -1,6 +1,3 @@
-"use client";
-
-
 import { Manrope } from "@next/font/google";
 import Image from "next/image";
 
@@ -15,10 +12,11 @@ const Hero = (props: Props) => {
     <div className="text-secondary-white mb-20">
       <div className="space-y-12 text-hero-primary-para">
         <p className="leading-normal tracking-wide">
-          <span className="text-4xl">Hi</span> there! My name is <span className={manrope.className}>Sanyam</span>
-          , and welcome to my portfolio website. I am a fullstack web developer
-          from India and I am passionate about creating web applications that
-          are both functional and user-friendly.
+          <span className="text-4xl">Hi</span> there! My name is{" "}
+          <span className={manrope.className}>Sanyam</span>, and welcome to my
+          portfolio website. I am a fullstack web developer from India and I am
+          passionate about creating web applications that are both functional
+          and user-friendly.
         </p>
         <p className="leading-normal tracking-wide">
           In my experience as a developer, I have found that simplicity is key
