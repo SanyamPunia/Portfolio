@@ -14,13 +14,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      {/* PADDING ACROSS WHOLE BODY of 2.0rem x-axis */}
-      <body>
-        <div>
-          <Header />
-          {children}
-          <Footer />
-        </div>
+      <body className="overflow-x-hidden">
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );

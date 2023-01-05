@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { scrollToTop } from "lib/util/scroll-to-top";
 import { motion } from "framer-motion";
+import { manrope } from "lib/util/get-class";
 
 type Props = {};
 
@@ -24,7 +25,7 @@ const Footer = (props: Props) => {
         }}
         className="flex justify-between text-[#646464] mb-24 tracking-wide flex-col gap-4 sm:flex-row"
       >
-        <div className="space-y-4">
+        <div className={`${manrope} space-y-4`}>
           <p className="footer-item">
             <Link onClick={pathname === "/" ? scrollToTop : undefined} href="/">
               About

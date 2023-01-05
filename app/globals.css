@@ -24,7 +24,7 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 4px;
   background: linear-gradient(to right, #1368a8, #0e68c6, #4462de, #7c53ed, #b52df0);
-  /* transform-origin: 0%; */
+  transform-origin: 0%;
 }

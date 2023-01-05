@@ -35,7 +35,7 @@ const ProjectCard = ({ projectList }: Project) => {
           key={project.id}
           className="rounded-lg"
         >
-          <div className="flex flex-col justify-between md:items-center md:flex-row gap-6 rounded-lg shadow-md bg-secondary-black border border-[#222222] transition-all duration-300 hover:backdrop-blur-sm hover:border-[#303030]">
+          <div className="flex flex-col justify-between md:items-center md:flex-row gap-6 rounded-lg shadow-md bg-secondary-black border border-primary-card-border transition-all duration-300 hover:backdrop-blur-sm hover:border-hover-card-border">
             {/* LEFT SECTION */}
             {/* PROJECT IMAGE */}
             <Image

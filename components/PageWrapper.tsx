@@ -9,7 +9,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <motion.div
-        className="progress-bar"
+        className="progress-bar relative"
         style={{ scaleX: scrollYProgress }}
       />
       <motion.div

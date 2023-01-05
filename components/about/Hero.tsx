@@ -1,19 +1,15 @@
-import { Manrope } from "@next/font/google";
+import { manrope } from "lib/util/get-class";
 import Image from "next/image";
-
-const manrope = Manrope({
-  weight: "700",
-});
 
 type Props = {};
 
 const Hero = (props: Props) => {
   return (
     <div className="text-secondary-white mb-20">
-      <div className="space-y-12 text-hero-primary-para">
-        <p className="leading-normal tracking-wide">
+      <div className={`${manrope} space-y-12 text-hero-primary-para`}>
+        <p className={`leading-normal tracking-wide`}>
           <span className="text-4xl">Hi</span> there! My name is{" "}
-          <span className={manrope.className}>Sanyam</span>, and welcome to my
+          <span style={{ fontWeight: 700 }}>Sanyam</span>, and welcome to my
           portfolio website. I am a fullstack web developer from India and I am
           passionate about creating web applications that are both functional
           and user-friendly.

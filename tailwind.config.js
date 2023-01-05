@@ -21,6 +21,8 @@ module.exports = {
         "primary-black": "#111111",
         "secondary-black": "#131313",
         divider: "#2D2A2A",
+        "primary-card-border": "#222222",
+        "hover-card-border": "#303030",
       },
       fontSize: {
         "nav-primary-heading": "1.68rem",

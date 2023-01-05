@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import Link from "next/link";
+import { manrope, poppins } from "lib/util/get-class";
 
 interface PropType {
   name: string;
@@ -21,7 +22,9 @@ const ProjectCardContent = ({
     <div className="mx-6 flex flex-col gap-4 sm:max-w-md max-w-2xl mb-6 md:mb-0">
       {/* NAME & URLs */}
       <div className="flex justify-between items-center">
-        <p className="text-primary-white text-2xl font-medium">{name}</p>
+        <p className={`${poppins} text-primary-white text-xl font-medium`}>
+          {name}
+        </p>
         <div className="flex gap-3 text-primary-white text-lg">
           <Link
             target="_blank"
@@ -41,7 +44,7 @@ const ProjectCardContent = ({
       </div>
 
       {/* DESCRIPTION */}
-      <p className="text-secondary-white text-md">{description}</p>
+      <p className={`${manrope} text-secondary-white text-md`}>{description}</p>
 
       {/* TAGS */}
       <div className="gap-2 flex flex-wrap justify-start">
