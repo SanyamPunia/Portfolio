@@ -1,13 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { IconType } from "react-icons/lib";
+import { IconObjctType } from "types/icons";
 
-interface IconObjct {
-  component: IconType;
-  href: string;
-  className: string;
-}
-
-export const icons: IconObjct[] = [
+export const icons: IconObjctType[] = [
   {
     component: FaGithub,
     href: "https://github.com/SanyamPunia",

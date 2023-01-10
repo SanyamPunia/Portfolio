@@ -1,13 +1,4 @@
-interface ProjectType {
-  id: number;
-  name: string;
-  description: string;
-  tags: string[];
-  bgImage: string;
-  logoImage: string;
-  githubUrl: string;
-  previewUrl?: string;
-}
+import { ProjectType } from "types/project";
 
 export const projectList: ProjectType[] = [
   {

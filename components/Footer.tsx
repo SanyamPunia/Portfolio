@@ -6,14 +6,23 @@ import Link from "next/link";
 import { scrollToTop } from "lib/util/scroll-to-top";
 import { motion } from "framer-motion";
 import { manrope } from "lib/util/get-class";
+import useSWR from "swr";
+import { fetcher } from "lib/util/fetcher";
+import { SpotifyData } from "types/spotify";
+import Spotify from "./Spotify";
 
 type Props = {};
 
 const Footer = (props: Props) => {
   const pathname = usePathname();
+  const { data } = useSWR<SpotifyData>("/api/spotify", fetcher);
+
+  console.log(data);
 
   return (
     <div className="px-8 max-w-3xl mx-auto">
+      <Spotify />
+
       <motion.div
         initial="hidden"
         whileInView="visible"

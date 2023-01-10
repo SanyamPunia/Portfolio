@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { navLinks } from "lib/nav-links";
 import ClockWidget from "components/ClockWidget";
 import IconSet from "app/IconSet";
-import { icons } from "lib/social-icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { manrope, poppins } from "lib/util/get-class";
@@ -68,7 +67,7 @@ const Header = (props: Props) => {
 
           {/* ICON SET */}
           {/* icons={icons} pass as prop */}
-          <IconSet icons={icons} />
+          <IconSet />
         </div>
       </div>
     </nav>

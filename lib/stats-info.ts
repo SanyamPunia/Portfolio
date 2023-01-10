@@ -1,14 +1,5 @@
 import { FaSoundcloud, FaSpotify, FaYoutube } from "react-icons/fa";
-import { IconType } from "react-icons/lib";
-
-interface StatsType {
-  id: number;
-  platformName: string;
-  platformLogo: IconType;
-  plays: string;
-  totalSongs: number;
-  logoHexCode: string;
-}
+import { StatsType } from "types/stats";
 
 export const stats: StatsType[] = [
   {

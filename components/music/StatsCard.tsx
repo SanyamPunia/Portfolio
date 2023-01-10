@@ -1,23 +1,14 @@
+"use client";
+
+import { stats } from "lib/stats-info";
 import Divider from "components/Divider";
 import { manrope, poppins } from "lib/util/get-class";
 import Link from "next/link";
 import React from "react";
-import { IconType } from "react-icons/lib";
+import useSWR from "swr";
+import { SpotifyData } from "types/spotify";
 
-interface StatsType {
-  id: number;
-  platformName: string;
-  platformLogo: IconType;
-  plays: string;
-  totalSongs: number;
-  logoHexCode: string;
-}
-
-interface PropType {
-  stats: StatsType[];
-}
-
-const StatsCard = ({ stats }: PropType) => {
+const StatsCard = () => {
   return (
     <>
       {stats.map((stat) => (

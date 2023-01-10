@@ -1,10 +1,4 @@
-import { Key } from "react";
-
-interface NavLink {
-  id: Key;
-  routeName: string;
-  route: string;
-}
+import { NavLink } from "types/navlinks";
 
 export const navLinks: Array<NavLink> = [
   {
