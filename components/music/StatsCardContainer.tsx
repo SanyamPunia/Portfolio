@@ -1,12 +1,16 @@
 import React from "react";
-import StatsCard from "./StatsCard";
 import Divider from "components/Divider";
+import SpotifyStatsCard from "./stat-cards/SpotifyStatsCard";
+import SoundCloudStatsCard from "./stat-cards/SoundCloudStatsCard";
+import YouTubeStatsCard from "./stat-cards/YouTubeStatsCard";
 
 const StatsCardContainer = () => {
   return (
     <>
       <div className="grid grid-cols-2 gap-4">
-        <StatsCard />
+        <SpotifyStatsCard />
+        <SoundCloudStatsCard />
+        <YouTubeStatsCard />
       </div>
       <Divider />
     </>
