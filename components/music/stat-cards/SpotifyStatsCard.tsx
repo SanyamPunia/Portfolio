@@ -15,7 +15,7 @@ const SpotifyStatsCard = () => {
 
   return (
     <>
-      {!data ? (
+      {data ? (
         <SkeletonCard />
       ) : (
         <div className="border transition-all duration-300 hover:border-hover-card-border shadow hover:shadow-sm border-primary-card-border p-6 rounded-xl space-y-5">
