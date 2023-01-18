@@ -9,7 +9,7 @@ const StatsCardContainer = () => {
     <>
       <div className="grid grid-cols-2 gap-4">
         <SpotifyStatsCard />
-        <SoundCloudStatsCard />
+        {/* <SoundCloudStatsCard /> */}
         <YouTubeStatsCard />
       </div>
       <Divider />

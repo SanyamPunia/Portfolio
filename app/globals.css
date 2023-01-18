@@ -16,6 +16,10 @@ html, body {
  .footer-item {
   @apply transition-all duration-300 cursor-pointer hover:text-secondary-white
  }
+
+ .stats-card {
+  @apply border transition-all duration-300 hover:border-hover-card-border shadow hover:shadow-sm border-primary-card-border p-6 rounded-xl space-y-5
+ }
 }
 
 .progress-bar {

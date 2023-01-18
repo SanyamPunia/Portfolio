@@ -8,6 +8,8 @@ const page = (props: Props) => {
   return (
     <PageWrapper>
       <Divider />
+      <h1 className="text-white text-xl">Blogs</h1>
+      <Divider />
     </PageWrapper>
   );
 };

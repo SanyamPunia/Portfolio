@@ -2,7 +2,6 @@
 
 import Divider from "components/Divider";
 import { manrope, poppins } from "lib/util/get-class";
-import Link from "next/link";
 import React from "react";
 import useSWR from "swr";
 import { fetcher } from "lib/util/fetcher";
@@ -15,20 +14,17 @@ const SpotifyStatsCard = () => {
 
   return (
     <>
-      {data ? (
+      {!data ? (
         <SkeletonCard />
       ) : (
-        <div className="border transition-all duration-300 hover:border-hover-card-border shadow hover:shadow-sm border-primary-card-border p-6 rounded-xl space-y-5">
+        <div className="stats-card">
           <div className="flex justify-between text-primary-white text-xl">
             <h1 className={`${poppins}`}>Spotify</h1>
-            <Link
-              href=""
-              className="p-1 rounded-md transition-all duration-300"
-            >
+            <div className="p-1 rounded-md transition-all duration-300">
               <span style={{ color: "#1DB954" }}>
                 <FaSpotify />
               </span>
-            </Link>
+            </div>
           </div>
 
           <Divider />

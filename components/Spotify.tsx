@@ -4,8 +4,6 @@ import useSWR from "swr";
 import { SpotifyDataType } from "types/spotify";
 import { fetcher } from "lib/util/fetcher";
 
-type Props = {};
-
 const Spotify = () => {
   const { data } = useSWR<SpotifyDataType>("/api/spotify", fetcher, {
     refreshInterval: 1000,
