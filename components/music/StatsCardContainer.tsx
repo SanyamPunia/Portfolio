@@ -1,5 +1,4 @@
 import React from "react";
-import Divider from "components/Divider";
 import SpotifyStatsCard from "./stat-cards/SpotifyStatsCard";
 import SoundCloudStatsCard from "./stat-cards/SoundCloudStatsCard";
 import YouTubeStatsCard from "./stat-cards/YouTubeStatsCard";
@@ -12,7 +11,6 @@ const StatsCardContainer = () => {
         {/* <SoundCloudStatsCard /> */}
         <YouTubeStatsCard />
       </div>
-      <Divider />
     </>
   );
 };

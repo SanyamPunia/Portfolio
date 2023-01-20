@@ -11,7 +11,7 @@ const page = (props: Props) => {
     <PageWrapper>
       <Divider />
       <Hero />
-      <StatsCardContainer />
+      <Divider />
     </PageWrapper>
   );
 };

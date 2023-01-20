@@ -21,7 +21,6 @@ const Spotify = () => {
         <span className="text-2xl select-none">•</span>
       </div>
       <div className={`flex gap-2 ${manrope}`}>
-        {/* <FaExclamationTriangle className="text-white" /> */}
         <div className="flex gap-1 text-primary-gray">
           <p>
             {data?.isPlaying ? (
