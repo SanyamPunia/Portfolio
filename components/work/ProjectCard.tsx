@@ -3,26 +3,12 @@
 import Image from "next/image";
 import ProjectCardContent from "components/work/ProjectCardContent";
 import { motion } from "framer-motion";
-
-interface ProjectPropType {
-  id: number;
-  name: string;
-  description: string;
-  tags: string[];
-  bgImage: string;
-  logoImage: string;
-  githubUrl: string;
-  previewUrl?: string;
-}
-
-interface Project {
-  projectList: ProjectPropType[];
-}
+import { Project, ProjectType } from "types/project";
 
 const ProjectCard = ({ projectList }: Project) => {
   return (
     <div className="space-y-4 grid-cols-1 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 md:grid-cols-1">
-      {projectList.map((project: ProjectPropType) => (
+      {projectList.map((project: ProjectType) => (
         <motion.div
           initial="hidden"
           whileInView="visible"

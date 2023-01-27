@@ -6,7 +6,7 @@ const SpotifyEmbed = (props: Props) => {
   return (
     <div className="rounded-md">
       <iframe
-        src="https://open.spotify.com/embed/artist/2QbtOIjb8mUIsnCNqvyWAW?utm_source=generator"
+        src="https://open.spotify.com/embed/artist/2QbtOIjb8mUIsnCNqvyWAW?utm_source=generator&theme=0"
         width="100%"
         height="400px"
         allowFullScreen

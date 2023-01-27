@@ -8,3 +8,7 @@ export interface ProjectType {
   githubUrl: string;
   previewUrl?: string;
 }
+
+export interface Project {
+  projectList: ProjectType[];
+}

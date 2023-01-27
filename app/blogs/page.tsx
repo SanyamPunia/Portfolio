@@ -1,14 +1,19 @@
 import Divider from "components/Divider";
-import React from "react";
 import PageWrapper from "components/PageWrapper";
+import { getBlogs } from "lib/util/hygraph";
+import Hero from "components/blogs/Hero";
+import BlogContainer from "components/blogs/BlogContainer";
 
 type Props = {};
 
-const page = (props: Props) => {
+const page = async (props: Props) => {
+  const portfolioBlogs = await getBlogs();
+
   return (
     <PageWrapper>
       <Divider />
-      <h1 className="text-white text-xl">Blogs</h1>
+      <Hero />
+      <BlogContainer portfolioBlogs={portfolioBlogs} />
       <Divider />
     </PageWrapper>
   );

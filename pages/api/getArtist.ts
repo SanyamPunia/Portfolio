@@ -1,14 +1,13 @@
 import axios from "axios";
+import { ARTIST_ID } from "lib/constants";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getAccessToken } from "./spotify";
 
 const ARTIST_ENDPOINT = "https://api.spotify.com/v1/artists/";
-const ARTIST_ALBUM_ENDPOINT =
-  "https://api.spotify.com/v1/artists/${artistId}/albums?album_type=album&market=US&limit=50";
 
 export const getArtist = async () => {
   const access_token: string = await getAccessToken();
-  const artistId: string = "2QbtOIjb8mUIsnCNqvyWAW";
+  const artistId: string = ARTIST_ID;
 
   const response = await axios.get(ARTIST_ENDPOINT + artistId, {
     headers: {

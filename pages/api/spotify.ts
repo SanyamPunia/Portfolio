@@ -1,4 +1,5 @@
 import axios from "axios";
+import { ARTIST_ID } from "lib/constants";
 import { NextApiRequest, NextApiResponse } from "next";
 import querystring from "querystring";
 import { SpotifyApiDataType } from "types/spotify";
@@ -33,7 +34,7 @@ export const getAccessToken = async () => {
 
 export const getArtist = async () => {
   const access_token: string = await getAccessToken();
-  const artistId: string = "2QbtOIjb8mUIsnCNqvyWAW";
+  const artistId: string = ARTIST_ID;
 
   const config = {
     headers: {

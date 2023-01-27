@@ -17,7 +17,7 @@ module.exports = {
         "secondary-white": "#BCBCBC",
         "primary-gray": "#545353",
         "primary-gray-highlighted": "#777777",
-        "secondary-gray": "",
+        "secondary-gray": "#6A6767",
         "primary-black": "#111111",
         "secondary-black": "#131313",
         divider: "#2D2A2A",
