@@ -5,8 +5,6 @@ import React from "react";
 import { Blogs } from "types/blogs";
 
 const Blog = ({ portfolioBlogs }: Blogs) => {
-  console.log(portfolioBlogs);
-
   return (
     <>
       {portfolioBlogs.map((blog) => (
