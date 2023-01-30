@@ -1,7 +1,6 @@
 import PageWrapper from "components/PageWrapper";
 import { getBlog, getBlogs } from "lib/util/hygraph";
-import React from "react";
-import { BlogType, Blogs } from "types/blogs";
+import { Blogs } from "types/blogs";
 import { serialize } from "next-mdx-remote/serialize";
 import MDXContent from "components/blogs/mdx/MDXContent";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
@@ -9,8 +8,6 @@ import { components } from "lib/mdx-components";
 import rehypeHighlight from "rehype-highlight/lib";
 import Divider from "components/Divider";
 import BlogHeader from "components/blogs/mdx/BlogHeader";
-
-type Props = {};
 
 const page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
