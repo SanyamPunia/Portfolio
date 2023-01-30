@@ -15,6 +15,7 @@
     "@types/react-dom": "18.0.10",
     "axios": "^1.2.2",
     "date-and-time": "^2.4.1",
+    "encoding": "^0.1.13",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
     "framer-motion": "^8.0.2",
