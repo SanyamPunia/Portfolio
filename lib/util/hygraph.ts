@@ -3,7 +3,7 @@ import { gql } from "graphql-request";
 import { Blogs } from "types/blogs";
 
 export const getBlogs = async () => {
-  const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT as string);
+  const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/clc66e6q413f401t6cimh9qqq/master");
   const QUERY = gql`
     {
       portfolioBlogs {
@@ -28,7 +28,7 @@ export const getBlogs = async () => {
 };
 
 export const getBlog = async (slug: string) => {
-  const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT as string);
+  const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/clc66e6q413f401t6cimh9qqq/master");
   const QUERY = gql`
     query getBlog($slug: String) {
       portfolioBlogs(where: { slug: $slug }) {
