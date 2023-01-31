@@ -34,7 +34,7 @@ export const getAccessToken = async () => {
 
 export const getArtist = async () => {
   const access_token: string = await getAccessToken();
-  const artistId: string = ARTIST_ID;
+  const artistId: string = "2QbtOIjb8mUIsnCNqvyWAW";
 
   const config = {
     headers: {

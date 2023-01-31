@@ -26,20 +26,22 @@ const ProjectCardContent = ({
           {name}
         </p>
         <div className="flex gap-3 text-primary-white text-lg">
-          <Link
+          <a
             target="_blank"
+            rel="noreferrer"
             href={githubUrl}
             className="hover:shadow-lg hover:shadow-blue-500/50 p-1 rounded-md bg-divider hover:bg-primary-gray transition-all duration-300"
           >
             <FaGithub />
-          </Link>
-          <Link
+          </a>
+          <a
             target="_blank"
-            href=""
+            rel="noreferrer"
+            href={previewUrl}
             className="hover:shadow-lg hover:shadow-blue-500/50 p-1 rounded-md bg-divider hover:bg-primary-gray transition-all duration-300"
           >
             <FaLink />
-          </Link>
+          </a>
         </div>
       </div>
 

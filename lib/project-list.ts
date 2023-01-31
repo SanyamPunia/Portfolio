@@ -10,7 +10,7 @@ export const projectList: ProjectType[] = [
     bgImage: "skillup-preview",
     logoImage: "skillup-logo",
     githubUrl: "https://github.com/SanyamPunia/Skill-Up-NCU",
-    previewUrl: "",
+    previewUrl: "https://skillup-ncu.vercel.app/",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const projectList: ProjectType[] = [
     bgImage: "gymlanding-preview",
     logoImage: "gym-logo",
     githubUrl: "https://github.com/SanyamPunia/Gym-Landing-Page",
-    previewUrl: "",
+    previewUrl: "https://6ed9fd44.gym-landing-page.pages.dev/",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const projectList: ProjectType[] = [
     bgImage: "suparadio-preview",
     logoImage: "suparadio-logo",
     githubUrl: "https://github.com/SanyamPunia/Supa-Radio",
-    previewUrl: "",
+    previewUrl: "https://suparadio-viz.web.app/",
   },
   {
     id: 4,
@@ -43,6 +43,6 @@ export const projectList: ProjectType[] = [
     bgImage: "nextblog-preview",
     logoImage: "nextblog-logo",
     githubUrl: "https://github.com/SanyamPunia/next-blog",
-    previewUrl: "",
+    previewUrl: "https://next-blog-app-virid.vercel.app/",
   },
 ];
