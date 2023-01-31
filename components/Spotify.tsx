@@ -5,15 +5,9 @@ import { SpotifyDataType } from "types/spotify";
 import { fetcher } from "lib/util/fetcher";
 
 const Spotify = () => {
-  const { data, error, isLoading } = useSWR<SpotifyDataType>(
-    "/api/spotify",
-    fetcher,
-    {
-      refreshInterval: 1000,
-    }
-  );
-
-  if (error) console.log(error);
+  const { data } = useSWR<SpotifyDataType>("/api/spotify", fetcher, {
+    refreshInterval: 100,
+  });
 
   return (
     <div className="sm:flex-row flex-col flex sm:items-center sm:gap-2 mb-4">
