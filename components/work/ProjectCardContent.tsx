@@ -1,6 +1,4 @@
-import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
-import Link from "next/link";
 import { manrope, poppins } from "lib/util/get-class";
 
 interface PropType {

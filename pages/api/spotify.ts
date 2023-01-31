@@ -1,5 +1,4 @@
 import axios from "axios";
-import { ARTIST_ID } from "lib/constants";
 import { NextApiRequest, NextApiResponse } from "next";
 import querystring from "querystring";
 import { SpotifyApiDataType } from "types/spotify";
@@ -14,7 +13,7 @@ const token = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
-export const getAccessToken = async () => {
+const getAccessToken = async () => {
   const res = await axios.post<{ access_token: string }>(
     TOKEN_ENDPOINT,
     querystring.stringify({
@@ -32,25 +31,9 @@ export const getAccessToken = async () => {
   return res.data.access_token;
 };
 
-export const getArtist = async () => {
-  const access_token: string = await getAccessToken();
-  const artistId: string = "2QbtOIjb8mUIsnCNqvyWAW";
-
-  const config = {
-    headers: {
-      Authorization: `Bearer ${access_token}`,
-    },
-  };
-
-  const response = await axios.get(
-    `https://api.spotify.com/v1/artists/${artistId}`,
-    config
-  );
-  return response.data;
-};
 
 export const getNowPlaying = async () => {
-  const access_token = await getAccessToken();
+  const access_token: string = await getAccessToken();
 
   return axios.get<SpotifyApiDataType>(NOW_PLAYING_ENDPOINT, {
     headers: {
