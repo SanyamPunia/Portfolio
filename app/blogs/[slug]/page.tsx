@@ -23,6 +23,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
     <PageWrapper>
       <Divider />
       <BlogHeader portfolioBlogs={blog.portfolioBlogs} />
+
+      <hr className="my-14 border-0 h-px bg-divider w-1/3 m-auto" />
+
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/srcery.min.css"
