@@ -31,7 +31,6 @@ const getAccessToken = async () => {
   return res.data.access_token;
 };
 
-
 export const getNowPlaying = async () => {
   const access_token: string = await getAccessToken();
 
