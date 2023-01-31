@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-type Props = {};
-
 const BlogImage = ({
   coverImage,
 }: {

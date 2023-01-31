@@ -24,10 +24,6 @@ const SkeletonCard = (props: Props) => {
           <div className="h-1 w-20 rounded-lg bg-primary-card-border"></div>
           <div className="h-1 w-20 rounded-lg bg-primary-card-border"></div>
         </div>
-        <div className="flex justify-between items-center">
-          <div className="h-1 w-20 rounded-lg bg-primary-card-border"></div>
-          <div className="h-1 w-20 rounded-lg bg-primary-card-border"></div>
-        </div>
       </div>
     </div>
   );

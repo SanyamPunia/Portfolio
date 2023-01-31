@@ -1,9 +1,6 @@
 import { manrope, poppins } from "lib/util/get-class";
 import { Blogs, BlogType } from "types/blogs";
 import BlogImage from "components/blogs/mdx/BlogImage";
-import Divider from "components/Divider";
-
-type Props = {};
 
 const BlogHeader = (portfolioBlogs: Blogs) => {
   const currentBlog: BlogType = portfolioBlogs.portfolioBlogs[0];
