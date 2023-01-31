@@ -53,10 +53,11 @@ export default async function spotify(
       response.status > 400 ||
       response.data.currently_playing_type !== "track"
     ) {
-      res.setHeader(
-        "Cache-Control",
-        "public, s-maxage=180, stale-while-revalidate=90"
-      );
+      // res.setHeader(
+      //   "Cache-Control",
+      //   "max-age=0"
+      //   // public, s-maxage=180, stale-while-revalidate=90
+      // );
       return res.status(200).json({ isPlaying: false });
     }
 
@@ -71,10 +72,11 @@ export default async function spotify(
       songUrl: response.data.item.external_urls.spotify,
     };
 
-    res.setHeader(
-      "Cache-Control",
-      "public, s-maxage=180, stale-while-revalidate=90"
-    );
+    // res.setHeader(
+    //   "Cache-Control",
+    //   "max-age=0"
+    //   // public, s-maxage=180, stale-while-revalidate=90
+    // );
     return res.status(200).json(data);
   }
 }
