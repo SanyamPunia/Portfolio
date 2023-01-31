@@ -4,9 +4,9 @@ import querystring from "querystring";
 import { SpotifyApiDataType } from "types/spotify";
 
 const {
-  SPOTIFY_CLIENT_ID: client_id,
-  SPOTIFY_CLIENT_SECRET: client_secret,
-  SPOTIFY_REFRESH_TOKEN: refresh_token,
+  NEXT_PUBLIC_SPOTIFY_CLIENT_ID: client_id,
+  NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET: client_secret,
+  NEXT_PUBLIC_SPOTIFY_REFRESH_TOKEN: refresh_token,
 } = process.env;
 
 const token = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
