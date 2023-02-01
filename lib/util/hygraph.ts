@@ -2,8 +2,10 @@ import { GraphQLClient } from "graphql-request";
 import { gql } from "graphql-request";
 import { Blogs } from "types/blogs";
 
-export const getBlogs = async () => {
-  const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/clc66e6q413f401t6cimh9qqq/master");
+export const getBlogs = async (): Promise<Blogs> => {
+  const hygraph = new GraphQLClient(
+    "https://api-ap-south-1.hygraph.com/v2/clc66e6q413f401t6cimh9qqq/master"
+  );
   const QUERY = gql`
     {
       portfolioBlogs {
@@ -22,13 +24,15 @@ export const getBlogs = async () => {
       }
     }
   `;
-  const { portfolioBlogs }: Blogs = await hygraph.request(QUERY);
+  const { portfolioBlogs } = await hygraph.request(QUERY);
 
   return portfolioBlogs;
 };
 
-export const getBlog = async (slug: string) => {
-  const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/clc66e6q413f401t6cimh9qqq/master");
+export const getBlog = async (slug: string): Promise<Blogs> => {
+  const hygraph = new GraphQLClient(
+    "https://api-ap-south-1.hygraph.com/v2/clc66e6q413f401t6cimh9qqq/master"
+  );
   const QUERY = gql`
     query getBlog($slug: String) {
       portfolioBlogs(where: { slug: $slug }) {
@@ -52,5 +56,7 @@ export const getBlog = async (slug: string) => {
     slug,
   };
 
-  return await hygraph.request(QUERY, variables);
+  const blog = await hygraph.request(QUERY, variables);
+
+  return blog;
 };
