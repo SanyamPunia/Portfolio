@@ -7,6 +7,7 @@
 - [Tailwind CSS](https://tailwindcss.com/) - **Styling**
 - [Framer Motion](https://www.framer.com/motion/) - **Animations**
 - [VERCEL](https://vercel.com/) - **Deployment**
+- [linear.app](https://linear.app/) - **Streamlining & Roadmap**
 
 <hr />
 
