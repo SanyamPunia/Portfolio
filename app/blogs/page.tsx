@@ -3,6 +3,7 @@ import PageWrapper from "components/PageWrapper";
 import { getBlogs } from "lib/util/hygraph";
 import Hero from "components/blogs/Hero";
 import BlogContainer from "components/blogs/BlogContainer";
+import { Blogs, BlogType } from "types/blogs";
 
 type Props = {};
 

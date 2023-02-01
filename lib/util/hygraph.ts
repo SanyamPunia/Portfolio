@@ -2,7 +2,7 @@ import { GraphQLClient } from "graphql-request";
 import { gql } from "graphql-request";
 import { Blogs } from "types/blogs";
 
-export const getBlogs = async (): Promise<Blogs> => {
+export const getBlogs = async () => {
   const hygraph = new GraphQLClient(
     "https://api-ap-south-1.hygraph.com/v2/clc66e6q413f401t6cimh9qqq/master"
   );
@@ -29,7 +29,7 @@ export const getBlogs = async (): Promise<Blogs> => {
   return portfolioBlogs;
 };
 
-export const getBlog = async (slug: string): Promise<Blogs> => {
+export const getBlog = async (slug: string) => {
   const hygraph = new GraphQLClient(
     "https://api-ap-south-1.hygraph.com/v2/clc66e6q413f401t6cimh9qqq/master"
   );
@@ -56,7 +56,5 @@ export const getBlog = async (slug: string): Promise<Blogs> => {
     slug,
   };
 
-  const blog = await hygraph.request(QUERY, variables);
-
-  return blog;
+  return await hygraph.request(QUERY, variables);
 };

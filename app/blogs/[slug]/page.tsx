@@ -1,6 +1,6 @@
 import PageWrapper from "components/PageWrapper";
 import { getBlog, getBlogs } from "lib/util/hygraph";
-import { Blogs } from "types/blogs";
+import { Blogs, BlogType } from "types/blogs";
 import { serialize } from "next-mdx-remote/serialize";
 import MDXContent from "components/blogs/mdx/MDXContent";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
@@ -41,9 +41,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
 export default page;
 
 export async function generateStaticParams() {
-  const portfolioBlogs: any = await getBlogs();
+  const portfolioBlogs = await getBlogs();
 
-  return portfolioBlogs.map((blog: any) => ({
+  return portfolioBlogs.map((blog: BlogType) => ({
     slug: blog.slug,
   }));
 }
