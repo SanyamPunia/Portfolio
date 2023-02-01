@@ -41,9 +41,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
 export default page;
 
 export async function generateStaticParams() {
-  const portfolioBlogs = await getBlogs();
+  const portfolioBlogs: any = await getBlogs();
 
-  return portfolioBlogs.map((blog) => ({
+  return portfolioBlogs.map((blog: any) => ({
     slug: blog.slug,
   }));
 }
