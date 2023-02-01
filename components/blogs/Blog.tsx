@@ -7,7 +7,7 @@ import { Blogs } from "types/blogs";
 const Blog = ({ portfolioBlogs }: Blogs) => {
   return (
     <>
-      {portfolioBlogs.map((blog) => (
+      {portfolioBlogs?.map((blog) => (
         <div
           key={blog.id}
           className="p-4 space-y-4 rounded-lg shadow-sm bg-secondary-black border border-primary-card-border transition-all duration-300 hover:backdrop-blur-sm hover:border-hover-card-border"
