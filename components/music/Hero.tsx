@@ -41,8 +41,8 @@ const Hero = (props: Props) => {
           >
             YouTube
           </a>
-        </span>{" "}
-        and other platforms helped me gather bunch of people that enjoyed
+        </span>
+        , and other platforms helped me gather a bunch of people that enjoyed
         listening to my music.
       </p>
 
@@ -51,7 +51,7 @@ const Hero = (props: Props) => {
       <p className="leading-normal tracking-wide">
         Reaching <span className="text-primary-white">75,000+</span> plays on
         SoundCloud within a span of 1.5 years was a big achievement for me. With
-        combined plays from YouTube & other streaming services, total number of
+        combined plays from YouTube & other streaming services, the total number of
         plays peaked <span className="text-primary-white">150,000+</span>.
       </p>
 

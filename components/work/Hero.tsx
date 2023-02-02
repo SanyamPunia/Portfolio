@@ -9,7 +9,7 @@ const Hero = (props: Props) => {
       <div className={`${manrope} space-y-12 text-hero-primary-para`}>
         <p className="leading-normal tracking-wide">
           <span className="text-3xl">Here</span>, you can find a collection of
-          my projects which showcase my skills as a full stack developer and
+          my projects which showcase my skills as a full-stack developer and
           demonstrate my ability to deliver functional and visually appealing
           web applications.
         </p>

@@ -8,7 +8,7 @@ export const getBlogs = async () => {
   );
   const QUERY = gql`
     {
-      portfolioBlogs {
+      portfolioBlogs(orderBy: publishedAt_DESC) {
         title
         coverImage {
           url

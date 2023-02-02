@@ -10,7 +10,7 @@ const Hero = (props: Props) => {
         <p className={`leading-normal tracking-wide`}>
           <span className="text-4xl">Hi</span> there! My name is{" "}
           <span style={{ fontWeight: 700 }}>Sanyam</span>, and welcome to my
-          portfolio website. I am a fullstack web developer from India and I am
+          portfolio website. I am a full-stack web developer from India and I am
           passionate about creating web applications that are both functional
           and user-friendly.
         </p>
@@ -35,7 +35,7 @@ const Hero = (props: Props) => {
           </p>
         </div>
         <p className="leading-normal tracking-wide">
-          I am currently seeking internship opportunities as a frontend
+          I am currently seeking internship opportunities as a front-end
           developer. If you have any inquiries or would like to discuss
           potential opportunities, please don&apos;t hesitate to reach out.
           Thank you for visiting my portfolio website, and I look forward to
