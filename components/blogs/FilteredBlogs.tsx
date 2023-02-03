@@ -18,7 +18,7 @@ const FilteredBlogs = ({ portfolioBlogs }: Blogs) => {
       <div className="w-full text-primary-white mb-6 flex">
         <input
           className={`${poppins} outline-none transition-all w-full rounded-md bg-transparent border border-primary-card-border py-3 px-4 placeholder-primary-gray focus:border focus:border-hover-card-border focus:shadow-2xl`}
-          placeholder="Search blogs..."
+          placeholder="🔍 Search blogs..."
           onChange={(event) => setSearchValue(event.target.value)}
         />
       </div>
