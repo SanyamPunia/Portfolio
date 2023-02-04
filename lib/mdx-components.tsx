@@ -52,4 +52,13 @@ export const components = {
       {...props}
     />
   ),
+  a: (props: JSX.Element) => (
+    <a
+      style={{
+        color: "#BCBCBC",
+        textDecoration: "underline",
+      }}
+      {...props}
+    />
+  ),
 };
