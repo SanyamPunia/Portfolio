@@ -1,13 +1,14 @@
 import { manrope } from "lib/util/get-class";
 import Image from "next/image";
+import clsx from "clsx";
 
 type Props = {};
 
 const Hero = (props: Props) => {
   return (
     <div className="text-secondary-white mb-20">
-      <div className={`${manrope} space-y-12 text-hero-primary-para`}>
-        <p className={`leading-normal tracking-wide`}>
+      <div className={clsx(manrope, "space-y-12", "text-hero-primary-para")}>
+        <p className="leading-normal tracking-wide">
           <span className="text-4xl">Hi</span> there! My name is{" "}
           <span style={{ fontWeight: 700 }}>Sanyam</span>, and welcome to my
           portfolio website. I am a full-stack web developer from India and I am
@@ -24,14 +25,19 @@ const Hero = (props: Props) => {
         <div className="w-full">
           <Image
             src="/assets/main-image-2.png"
-            className="select-none rounded-md aspect-auto grayscale-0"
+            className={clsx(
+              "select-none",
+              "rounded-md",
+              "aspect-auto",
+              "grayscale-0"
+            )}
             width={1000}
             height={1000}
             alt="main-image"
             draggable="false"
           />
           <p className="mt-1 text-center">
-            <span className="text-stone-500 text-sm">A picture of me 😁</span>{" "}
+            <span className={"text-stone-500 text-sm"}>A picture of me 😁</span>{" "}
           </p>
         </div>
         <p className="leading-normal tracking-wide">

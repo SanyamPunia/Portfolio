@@ -7,6 +7,7 @@ import { scrollToTop } from "lib/util/scroll-to-top";
 import { motion } from "framer-motion";
 import { manrope } from "lib/util/get-class";
 import Spotify from "./Spotify";
+import clsx from "clsx";
 
 type Props = {};
 
@@ -37,7 +38,13 @@ const Footer = (props: Props) => {
           hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="flex justify-between text-[#646464] mb-24 tracking-wide flex-col gap-4 sm:flex-row"
+        className={clsx(
+          "flex flex-col gap-4",
+          "justify-between",
+          "sm:flex-row",
+          "text-[#646464] tracking-wide",
+          "mb-24"
+        )}
       >
         <div className={`${manrope} space-y-4`}>
           <p className="footer-item">

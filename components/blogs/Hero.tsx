@@ -1,12 +1,17 @@
 import { manrope } from "lib/util/get-class";
 import React from "react";
+import clsx from "clsx";
 
 type Props = {};
 
 const Hero = (props: Props) => {
   return (
     <div
-      className={`text-secondary-white ${manrope} text-hero-primary-para space-y-6 mb-12`}
+      className={clsx(
+        manrope,
+        "text-secondary-white text-hero-primary-para",
+        "space-y-6 mb-12"
+      )}
     >
       <p className="leading-normal tracking-wide">
         <span className="text-4xl">Since</span> November 2021, I have been
@@ -16,7 +21,13 @@ const Hero = (props: Props) => {
       </p>
       <p className="leading-normal tracking-wide">
         I am also an occasional contributor on{" "}
-        <span className="text-primary-white underline transition-all hover:text-secondary-white">
+        <span
+          className={clsx(
+            "text-primary-white",
+            "underline",
+            "transition-all hover:text-secondary-white"
+          )}
+        >
           <a
             href="https://medium.com/@prodmxle"
             target="_blank"

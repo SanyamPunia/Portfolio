@@ -3,6 +3,7 @@ import { manrope } from "lib/util/get-class";
 import useSWR from "swr";
 import { SpotifyDataType } from "types/spotify";
 import { fetcher } from "lib/util/fetcher";
+import clsx from "clsx";
 
 const Spotify = () => {
   const { data } = useSWR<SpotifyDataType>("/api/spotify", fetcher, {
@@ -10,7 +11,13 @@ const Spotify = () => {
   });
 
   return (
-    <div className="sm:flex-row flex-col flex sm:items-center sm:gap-2 mb-4">
+    <div
+      className={clsx(
+        "flex flex-col",
+        "sm:flex-row  sm:items-center sm:gap-2",
+        "mb-4"
+      )}
+    >
       <div className="flex items-center gap-2">
         <FaSpotify className="text-[#1DB954]" />
         <h1 className={`text-primary-white ${manrope}`}>
@@ -25,7 +32,13 @@ const Spotify = () => {
           <p>
             {data?.isPlaying ? (
               <>
-                <span className="cursor-pointer transition hover:text-primary-gray-highlighted underline underline-offset-2">
+                <span
+                  className={clsx(
+                    "cursor-pointer",
+                    "transition hover:text-primary-gray-highlighted",
+                    "underline underline-offset-2"
+                  )}
+                >
                   <a target="_blank" rel="noreferrer" href={data?.songUrl}>
                     {data?.title}
                   </a>

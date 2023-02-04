@@ -9,6 +9,7 @@ import IconSet from "app/IconSet";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { manrope, poppins } from "lib/util/get-class";
+import clsx from "clsx";
 
 type Props = {};
 
@@ -17,11 +18,28 @@ const Header = (props: Props) => {
 
   return (
     <nav className="px-8 max-w-3xl mx-auto mt-32">
-      <div className="flex justify-between items-center flex-col text-center md:flex-row md:text-left">
+      <div
+        className={clsx(
+          "flex flex-col",
+          "justify-between items-center  text-center",
+          "md:flex-row md:text-left"
+        )}
+      >
         {/* LEFT CONTAINER */}
         <div className="space-y-3.5">
           {/* AVATAR */}
-          <div className="animate-pulse ring-[5px] ring-purple-500/10 group transform transition ease-out hover:scale-105 hover:from-purple-800 hover:to-amber-600  active:translate-y-px border border-gray-800 relative h-12 w-12 rounded-full bg-gradient-to-r from-[#071127] to-[#1c0942] mx-auto md:mx-0">
+          <div
+            className={clsx(
+              "animate-pulse",
+              " ring-[5px] ring-purple-500/10",
+              "group transform transition ease-out hover:scale-105 hover:from-purple-800 hover:to-amber-600  active:translate-y-px",
+              "border border-gray-800 rounded-full",
+              "h-12 w-12",
+              "bg-gradient-to-r from-[#071127] to-[#1c0942]",
+              "relative mx-auto ",
+              "md:mx-0 "
+            )}
+          >
             <Image
               src="/assets/pfp.png"
               fill
@@ -51,7 +69,11 @@ const Header = (props: Props) => {
                   {link.route === pathname && (
                     <motion.span
                       layoutId="underline"
-                      className="absolute left-0 top-full block h-[2px] w-full bg-primary-gray-highlighted"
+                      className={clsx(
+                        "absolute left-0 top-full block",
+                        "bg-primary-gray-highlighted",
+                        "h-[2px] w-full"
+                      )}
                     />
                   )}
                   {link.routeName}
@@ -66,7 +88,6 @@ const Header = (props: Props) => {
           <ClockWidget />
 
           {/* ICON SET */}
-          {/* icons={icons} pass as prop */}
           <IconSet />
         </div>
       </div>

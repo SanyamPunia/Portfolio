@@ -8,6 +8,7 @@ import { fetcher } from "lib/util/fetcher";
 import { ArtistType } from "types/spotify";
 import { FaExternalLinkAlt, FaSpotify } from "react-icons/fa";
 import SkeletonCard from "./SkeletonCard";
+import clsx from "clsx";
 
 const SpotifyStatsCard = () => {
   const { data } = useSWR<ArtistType>("/api/getArtist", fetcher);
@@ -17,10 +18,18 @@ const SpotifyStatsCard = () => {
       {!data ? (
         <SkeletonCard />
       ) : (
+        // See globals.css
         <div className="stats-card">
-          <div className="flex justify-between text-primary-white text-xl">
-            <h1 className={`${poppins}`}>Spotify</h1>
-            <div className="p-1 rounded-md transition-all duration-300">
+          <div
+            className={clsx(
+              "flex justify-between",
+              "text-primary-white text-xl"
+            )}
+          >
+            <h1 className={poppins}>Spotify</h1>
+            <div
+              className={clsx("p-1 rounded-md", "transition-all duration-300")}
+            >
               <span style={{ color: "#1DB954" }}>
                 <FaSpotify />
               </span>
@@ -29,7 +38,7 @@ const SpotifyStatsCard = () => {
 
           <Divider />
 
-          <div className={`${manrope} text-md text-secondary-white`}>
+          <div className={clsx(manrope, "text-md text-secondary-white")}>
             <div className="mb-2 flex justify-between">
               <span>Artist Name</span>
               <h1>{data?.name}</h1>

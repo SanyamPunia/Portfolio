@@ -8,6 +8,7 @@ import { getYoutubeStats } from "lib/util/get-youtube-stats";
 import { YouTubeChannelResponse } from "types/youtube";
 import SkeletonCard from "./SkeletonCard";
 import Link from "next/link";
+import clsx from "clsx";
 
 type Props = {};
 
@@ -40,7 +41,7 @@ const YouTubeStatsCard = (props: Props) => {
 
           <Divider />
 
-          <div className={`${manrope} text-md text-secondary-white`}>
+          <div className={clsx(manrope, "text-md text-secondary-white")}>
             <div className="mb-2 flex justify-between">
               <span>Channel</span>
               <Link

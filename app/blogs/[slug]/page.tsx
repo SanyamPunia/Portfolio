@@ -8,6 +8,7 @@ import { components } from "lib/mdx-components";
 import rehypeHighlight from "rehype-highlight/lib";
 import Divider from "components/Divider";
 import BlogHeader from "components/blogs/mdx/BlogHeader";
+import clsx from "clsx";
 
 const page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
@@ -24,7 +25,15 @@ const page = async ({ params }: { params: { slug: string } }) => {
       <Divider />
       <BlogHeader portfolioBlogs={blog.portfolioBlogs} />
 
-      <hr className="my-14 border-0 h-px bg-divider w-1/3 m-auto" />
+      <hr
+        className={clsx(
+          "my-14",
+          "border-0 h-px",
+          "bg-divider",
+          "w-1/3",
+          "m-auto"
+        )}
+      />
 
       <link
         rel="stylesheet"
