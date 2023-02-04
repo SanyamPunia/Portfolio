@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import BlogSubImage from "components/blogs/mdx/BlogSubImage";
 
 export const components = {
   h2: (props: JSX.Element) => (
@@ -42,16 +42,7 @@ export const components = {
   code: (props: JSX.Element) => (
     <code {...props} style={{ borderRadius: "5px" }} />
   ),
-  img: (props: any) => (
-    <Image
-      alt="sub-section-image"
-      width={1000}
-      height={1000}
-      style={{ borderRadius: "7px", userSelect: "none" }}
-      draggable="false"
-      {...props}
-    />
-  ),
+  img: (props: any) => <BlogSubImage {...props} />,
   a: (props: JSX.Element) => (
     <a
       style={{

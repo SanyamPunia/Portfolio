@@ -1,6 +1,5 @@
 import { poppins } from "lib/util/get-class";
 import React from "react";
-import { FaWatchmanMonitoring } from "react-icons/fa";
 import { Blogs } from "types/blogs";
 import Blog from "./Blog";
 

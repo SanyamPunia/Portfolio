@@ -8,6 +8,7 @@ type Props = {};
 
 const page = async (props: Props) => {
   const portfolioBlogs = await getBlogs();
+  
   return (
     <PageWrapper>
       <Divider />

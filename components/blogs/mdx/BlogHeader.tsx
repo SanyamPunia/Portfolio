@@ -1,6 +1,6 @@
 import { manrope, poppins } from "lib/util/get-class";
 import { Blogs, BlogType } from "types/blogs";
-import BlogImage from "components/blogs/mdx/BlogImage";
+import BlogImage from "components/blogs/mdx/BlogCoverImage";
 
 const BlogHeader = (portfolioBlogs: Blogs) => {
   const currentBlog: BlogType = portfolioBlogs.portfolioBlogs[0];
