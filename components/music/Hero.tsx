@@ -17,7 +17,7 @@ const Hero = (props: Props) => {
     >
       <p className="leading-normal tracking-wide">
         <span className="text-4xl">2020</span> was the year when I decided to
-        put my music out on the internet. Uploading my music to
+        put my music out on the internet. Uploading my music to{" "}
         <span
           className={clsx(
             "text-primary-white",

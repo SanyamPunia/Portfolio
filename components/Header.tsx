@@ -11,9 +11,7 @@ import { motion } from "framer-motion";
 import { manrope, poppins } from "lib/util/get-class";
 import clsx from "clsx";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   const pathname = usePathname();
 
   return (
@@ -21,7 +19,7 @@ const Header = (props: Props) => {
       <div
         className={clsx(
           "flex flex-col",
-          "justify-between items-center  text-center",
+          "justify-between items-center text-center",
           "md:flex-row md:text-left"
         )}
       >
