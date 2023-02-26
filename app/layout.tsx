@@ -1,7 +1,7 @@
 import Footer from "components/Footer";
 import Header from "components/Header";
 import "app/globals.css";
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
   title: "Sanyam | About",

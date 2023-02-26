@@ -3,7 +3,7 @@ import Divider from "components/Divider";
 import PageWrapper from "components/PageWrapper";
 import Hero from "components/work/Hero";
 import Project from "components/work/Project";
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
   title: "Sanyam | Work",
