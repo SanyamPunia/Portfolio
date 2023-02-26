@@ -37,7 +37,7 @@ Remove all of my personal information/content before using it as a template. Fee
 
 ## 📜 Logs (Updates)
 
-- Next.js v13.2
+- **Next.js** (v13.0 → v13.2)
 
   - Remove `head.tsx` and replace it using the [`metadata`](https://nextjs.org/blog/next-13-2#built-in-seo-support-with-new-metadata-api) object.
   - Dynamically generate metadata using [`generateMetadata`](https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata) function.
