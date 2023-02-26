@@ -11,7 +11,13 @@ import BlogHeader from "components/blogs/mdx/BlogHeader";
 import clsx from "clsx";
 import type { Metadata } from "next/types";
 
-export async function generateMetadata({ params }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: {
+    slug: string;
+  };
+}): Promise<Metadata> {
   const res: Blogs = await getBlog(params.slug);
   const metadataTitle = res.portfolioBlogs[0].title;
 
