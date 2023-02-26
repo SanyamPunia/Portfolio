@@ -32,4 +32,12 @@ HYGRAPH_ENDPOINT=...
 ```
 
 ## 📃 Usage
+
 Remove all of my personal information/content before using it as a template. Feel free to explore and contribute to the project. I'm open to all the PRs.
+
+## 📜 Logs (Updates)
+
+- Next.js v13.2
+
+  - Remove `head.tsx` and replace it using the [`metadata`](https://nextjs.org/blog/next-13-2#built-in-seo-support-with-new-metadata-api) object.
+  - Dynamically generate metadata using [`generateMetadata`](https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata) function.
