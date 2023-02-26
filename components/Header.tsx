@@ -34,8 +34,8 @@ const Header = () => {
               "border border-gray-800 rounded-full",
               "h-12 w-12",
               "bg-gradient-to-r from-[#071127] to-[#1c0942]",
-              "relative mx-auto ",
-              "md:mx-0 "
+              "relative mx-auto",
+              "md:mx-0"
             )}
           >
             <Image

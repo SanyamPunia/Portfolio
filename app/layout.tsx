@@ -1,6 +1,12 @@
 import Footer from "components/Footer";
 import Header from "components/Header";
 import "app/globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sanyam | About",
+  description: "Sanyam's Personal Portfolio",
+};
 
 export default function RootLayout({
   children,

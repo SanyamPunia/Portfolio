@@ -9,6 +9,16 @@ import rehypeHighlight from "rehype-highlight/lib";
 import Divider from "components/Divider";
 import BlogHeader from "components/blogs/mdx/BlogHeader";
 import clsx from "clsx";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const res: Blogs = await getBlog(params.slug);
+  const metadataTitle = res.portfolioBlogs[0].title;
+
+  return {
+    title: metadataTitle,
+  };
+}
 
 const page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
