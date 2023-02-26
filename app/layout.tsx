@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://sanyam.xyz/assets/og-image.png",
-        width: "1920",
-        height: "1080",
+        width: 1920,
+        height: 1080,
       },
     ],
     locale: "en-US",
