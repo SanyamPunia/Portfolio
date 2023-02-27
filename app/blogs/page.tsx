@@ -6,7 +6,7 @@ import FilteredBlogs from "components/blogs/FilteredBlogs";
 import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
-  title: "Sanyam | Blogs",
+  title: "Blogs",
   description:
     "Explore my technical articles and hopefully learn something new about the frontend web tech stack. I write occasionally about my experiences & different problems I solved during a period.",
 };

@@ -4,14 +4,17 @@ import "app/globals.css";
 import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
-  title: "Sanyam | Personal Portfolio",
+  title: {
+    default: "Sanyam | Personal Portfolio",
+    template: "Sanyam | %s",
+  },
   description:
     "Welcome to my peronsal portfolio where you'll get to know about my experiences of my professional life. I love building personal/pet projects & writing technical articles. I also make music as my side hobby.",
   openGraph: {
     title: "Sanyam | Personal Portfolio",
     description:
       "Welcome to my peronsal portfolio where you'll get to know about my experiences of my professional life. I love building personal/pet projects & writing technical articles. I also make music as my side hobby.",
-    url: "https://sanyam.xyz/",
+    url: "https://sanyam.xyz",
     siteName: "Sanyam's Portfolio",
     images: [
       {
