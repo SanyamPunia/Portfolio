@@ -15,7 +15,7 @@ const Footer = (props: Props) => {
   const pathname = usePathname();
 
   return (
-    <div className="px-8 max-w-3xl mx-auto">
+    <div className="px-8 max-w-3xl mx-auto relative">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -43,7 +43,8 @@ const Footer = (props: Props) => {
           "justify-between",
           "sm:flex-row",
           "text-[#646464] tracking-wide",
-          "mb-24"
+          "mb-24",
+          "relative"
         )}
       >
         <div className={`${manrope} space-y-4`}>
@@ -106,6 +107,7 @@ const Footer = (props: Props) => {
             by Sanyam
           </p>
         </div>
+        <div className="hidden sm:block absolute opacity-20 right-0 blur-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full w-[200px] h-[150px] -z-10" />
       </motion.div>
     </div>
   );

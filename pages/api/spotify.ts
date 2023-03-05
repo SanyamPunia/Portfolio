@@ -48,6 +48,7 @@ export default async function spotify(
   if (req.method === "GET") {
     const response = await getNowPlaying();
 
+
     if (
       response.status === 204 ||
       response.status > 400 ||

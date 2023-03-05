@@ -16,7 +16,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
-        transition={{ delay: 0.25 }}
+        transition={{ delay: 0.15 }}
         className="px-8 max-w-3xl mx-auto"
       >
         {children}

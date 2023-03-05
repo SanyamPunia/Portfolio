@@ -1,9 +1,8 @@
-import React from "react";
 import Divider from "components/Divider";
 import PageWrapper from "components/PageWrapper";
 import Hero from "components/work/Hero";
-import Project from "components/work/Project";
 import type { Metadata } from "next/types";
+import WorkCategory from "components/work/WorkCategory";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -13,11 +12,12 @@ export const metadata: Metadata = {
 
 type Props = {};
 const page = (props: Props) => {
+
   return (
     <PageWrapper>
       <Divider />
       <Hero />
-      <Project />
+      <WorkCategory />
       <Divider />
     </PageWrapper>
   );

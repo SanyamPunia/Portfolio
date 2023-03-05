@@ -11,6 +11,11 @@ body {
   background-color: #111111;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-attachment: fixed;
+  /* background-image: url("/assets/bg-dotted.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 * {

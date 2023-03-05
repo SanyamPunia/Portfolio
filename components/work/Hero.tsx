@@ -5,7 +5,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="text-secondary-white mb-20">
+    <div className="text-secondary-white mb-14">
       <div className={`${manrope} space-y-12 text-hero-primary-para`}>
         <p className="leading-normal tracking-wide">
           <span className="text-3xl">Here</span>, you can find a collection of

@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaEnvelope,
+  FaFilePdf,
+} from "react-icons/fa";
 import { IconObjctType } from "types/icons";
 import clsx from "clsx";
 
@@ -28,6 +34,12 @@ export const icons: IconObjctType[] = [
     href: "mailto:lewarends@gmail.com",
     className: "hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500",
   },
+  {
+    component: FaFilePdf,
+    href: "https://drive.google.com/file/d/1a1zZeIBVPh2lKD_VDyHDkTzuj0Q2H8Bt/view?usp=sharing",
+    className:
+      "hover:bg-gradient-to-r hover:from-emerald-500 hover:to-lime-600",
+  },
 ];
 
 const IconSet = () => {
@@ -47,9 +59,9 @@ const IconSet = () => {
               icon.className
             )}
           >
-            <Link href={icon.href} target="_blank">
+            <a href={icon.href} target="_blank">
               <icon.component />
-            </Link>
+            </a>
           </motion.div>
         ))}
       </div>

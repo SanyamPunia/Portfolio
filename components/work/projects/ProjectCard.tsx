@@ -1,11 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import ProjectCardContent from "components/work/ProjectCardContent";
+import ProjectCardContent from "components/work/projects/ProjectCardContent";
 import { motion } from "framer-motion";
 import { Project, ProjectType } from "types/project";
+import { useState } from "react";
+import clsx from "clsx";
 
 const ProjectCard = ({ projectList }: Project) => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
   return (
     <div className="space-y-4 grid-cols-1 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 md:grid-cols-1">
       {projectList.map((project: ProjectType) => (
@@ -27,10 +31,16 @@ const ProjectCard = ({ projectList }: Project) => {
             <Image
               width={1000}
               height={1000}
-              className="select-none rounded-t-lg md:rounded-l-lg md:rounded-r-none md:w-64"
+              className={clsx(
+                "select-none rounded-t-lg md:rounded-l-lg md:rounded-r-none md:w-64",
+                isLoading
+                  ? "grayscale blur-2xl scale-105"
+                  : "grayscale-0 blur-0 scale-100"
+              )}
               src={`/assets/project-preview/${project.logoImage}.png`}
               alt="project-image"
               draggable="false"
+              onLoadingComplete={() => setIsLoading(false)}
             />
 
             {/* RIGHT SECTION */}

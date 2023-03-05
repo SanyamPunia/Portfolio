@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cn } from "lib/util/cn";
 
 const BlogSubImage = (props: { src: string; alt: string }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   return (
     <Image
@@ -13,7 +13,7 @@ const BlogSubImage = (props: { src: string; alt: string }) => {
       className={cn(
         "rounded-md select-none group-hover:opacity-75 duration-1000 ease-in-out",
         isLoading
-          ? "grayscale blur-2xl scale-110"
+          ? "grayscale blur-2xl scale-105"
           : "grayscale-0 blur-0 scale-100"
       )}
       onLoadingComplete={() => setIsLoading(false)}
