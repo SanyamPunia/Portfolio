@@ -2,6 +2,7 @@ import Footer from "components/Footer";
 import Header from "components/Header";
 import "app/globals.css";
 import type { Metadata } from "next/types";
+import { AnalyticsWrapper } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <AnalyticsWrapper />
         <Footer />
       </body>
     </html>
