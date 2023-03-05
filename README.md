@@ -43,4 +43,4 @@ Remove all of my personal information/content before using it as a template. Fee
   - Dynamically generate metadata using [`generateMetadata`](https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata) function.
   - Using `title-templates` to suffix title.
   - Add `experience` tab (state) inside the `work` route
-  - Integrate [`vercel`'s](https://vercel.com/docs/concepts/analytics) analytics for gathering portfolio stats such as number of visitors & web vitals data.
+  - Integrate [`Vercel Analytics`](https://vercel.com/docs/concepts/analytics) for gathering portfolio stats such as number of visitors & web vitals data.
