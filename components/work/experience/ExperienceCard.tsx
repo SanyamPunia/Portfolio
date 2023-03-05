@@ -33,7 +33,7 @@ const ExperienceCard = ({ experienceList }: Experience) => {
               "flex flex-col gap-2",
               manrope,
               "border border-primary-card-border hover:border-hover-card-border rounded-md",
-              "p-5 transition"
+              "p-5 transition bg-secondary-black"
             )}
           >
             <div className="flex flex-col gap-3 sm:flex-row justify-between">
