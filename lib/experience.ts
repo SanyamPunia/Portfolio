@@ -9,7 +9,7 @@ export const experienceList: ExperienceType[] = [
     endDate: "March, 2023",
     source: "https://buildfast.co.in/",
     firstPara:
-      "My role as a fronend developer was to create clean & beautiful web components for various niches ranging from SaaS landing pages to Blockchain specific web pages.",
+      "My role as a frontend developer was to create clean & beautiful web components for various niches ranging from SaaS landing pages to Blockchain specific web pages.",
     secondPara:
       "All the landing pages & components were mobile responsive. I also created all the assets and illustrations used in the components using Figma.",
   },
