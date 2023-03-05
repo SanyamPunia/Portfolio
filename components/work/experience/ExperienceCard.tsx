@@ -17,7 +17,16 @@ const ExperienceCard = ({ experienceList }: Experience) => {
       className="flex flex-col gap-10"
     >
       {experienceList.map(
-        ({ id, name, role, startDate, endDate, source, description }) => (
+        ({
+          id,
+          name,
+          role,
+          startDate,
+          endDate,
+          source,
+          firstPara,
+          secondPara,
+        }) => (
           <div
             key={id}
             className={clsx(
@@ -55,8 +64,9 @@ const ExperienceCard = ({ experienceList }: Experience) => {
 
             <hr className="my-3 border-0 h-px bg-divider" />
 
-            <div className={`text-secondary-white ${manrope}`}>
-              {description}
+            <div className={`text-secondary-white ${manrope} flex flex-col gap-3`}>
+              <p>{firstPara}</p>
+              <p>{secondPara}</p>
             </div>
           </div>
         )
