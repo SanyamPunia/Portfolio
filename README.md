@@ -41,4 +41,6 @@ Remove all of my personal information/content before using it as a template. Fee
 
   - Remove `head.tsx` and replace it using the [`metadata`](https://nextjs.org/blog/next-13-2#built-in-seo-support-with-new-metadata-api) object.
   - Dynamically generate metadata using [`generateMetadata`](https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata) function.
-  - Using `title-templates` to suffix title. 
+  - Using `title-templates` to suffix title.
+  - Add `experience` tab (state) inside the `work` route
+  - Integrate [`vercel`'s](https://vercel.com/docs/concepts/analytics) analytics for gathering portfolio stats such as number of visitors & web vitals data.
