@@ -5,8 +5,6 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 
-type Props = {};
-
 const ExperienceCard = ({ experienceList }: Experience) => {
   return (
     <motion.div
@@ -17,16 +15,7 @@ const ExperienceCard = ({ experienceList }: Experience) => {
       className="flex flex-col gap-10"
     >
       {experienceList.map(
-        ({
-          id,
-          name,
-          role,
-          startDate,
-          endDate,
-          source,
-          firstPara,
-          secondPara,
-        }) => (
+        ({ id, name, role, startDate, endDate, source, description }) => (
           <div
             key={id}
             className={clsx(
@@ -64,10 +53,13 @@ const ExperienceCard = ({ experienceList }: Experience) => {
 
             <hr className="my-3 border-0 h-px bg-divider" />
 
-            <div className={`text-secondary-white ${manrope} flex flex-col gap-3`}>
-              <p>{firstPara}</p>
-              <p>{secondPara}</p>
-            </div>
+            <ul
+              className={`text-secondary-white ${manrope} flex flex-col gap-3`}
+            >
+              {description.map((e, index) => (
+                <li key={index}>{e}</li>
+              ))}
+            </ul>
           </div>
         )
       )}

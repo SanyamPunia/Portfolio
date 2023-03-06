@@ -5,8 +5,7 @@ export interface ExperienceType {
   startDate: string;
   endDate: string;
   source: string;
-  firstPara: string;
-  secondPara: string;
+  description: string[];
 }
 
 export interface Experience {
