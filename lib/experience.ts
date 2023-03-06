@@ -12,6 +12,7 @@ export const experienceList: ExperienceType[] = [
       "My role as a frontend developer was to create clean & beautiful web components for various niches ranging from SaaS landing pages to Blockchain specific web pages.",
       "All the landing pages & components were mobile responsive. I also created all the assets and illustrations used in the components using Figma.",
     ],
+    techStack: ["HTML5", "CSS3", "JavaScript", "Figma"],
   },
   {
     id: 2,
@@ -25,5 +26,6 @@ export const experienceList: ExperienceType[] = [
       "I completed 42 tasks which included UI Designing, Front/Back-end improvement, and Overall code refinement. I also contributed to various other SCoRe Lab branched Open-Source projects.",
       "I was selected as a finalist for completing a higher number of quality GCI tasks.",
     ],
+    techStack: ["Node.js", "HTML5", "CSS3", "JavaScript", "Express.js"],
   },
 ];

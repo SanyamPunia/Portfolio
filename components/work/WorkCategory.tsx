@@ -44,9 +44,13 @@ const WorkCategory = (props: Props) => {
               )}
               {c}
             </p>
-            <span className={`select-none ${
+            <span
+              className={`select-none ${
                 index === categoryArray.length - 1 ? "hidden" : "inline-block"
-              }`}>•</span>
+              }`}
+            >
+              •
+            </span>
           </>
         ))}
       </div>

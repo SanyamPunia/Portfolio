@@ -6,6 +6,7 @@ export interface ExperienceType {
   endDate: string;
   source: string;
   description: string[];
+  techStack: string[];
 }
 
 export interface Experience {
