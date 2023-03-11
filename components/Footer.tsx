@@ -107,7 +107,6 @@ const Footer = (props: Props) => {
             by Sanyam
           </p>
         </div>
-        {/* <div className="hidden sm:block absolute opacity-20 right-0 blur-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full w-[200px] h-[200px] -z-10" /> */}
       </motion.div>
     </div>
   );

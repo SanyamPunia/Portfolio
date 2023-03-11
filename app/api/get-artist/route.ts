@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ARTIST_ID } from "lib/constants";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import querystring from "querystring";
 
 const {
@@ -44,11 +44,8 @@ export const getArtist = async () => {
   return response.data;
 };
 
-export default async function spotifyGetData(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export async function GET() {
   const response = await getArtist();
 
-  return res.status(200).json(response);
+  return NextResponse.json(response);
 }

@@ -11,7 +11,7 @@ import SkeletonCard from "./SkeletonCard";
 import clsx from "clsx";
 
 const SpotifyStatsCard = () => {
-  const { data } = useSWR<ArtistType>("/api/getArtist", fetcher);
+  const { data } = useSWR<ArtistType>("/api/get-artist", fetcher);
 
   return (
     <>
