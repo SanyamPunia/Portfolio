@@ -1,4 +1,5 @@
 import axios from "axios";
+import { NextResponse } from "next/server";
 import { YouTubeChannelResponse } from "types/youtube";
 
 const YOUTUBE_API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
@@ -15,3 +16,9 @@ export const getYoutubeStats = async (): Promise<YouTubeChannelResponse> => {
     throw error;
   }
 };
+
+export async function GET() {
+  const response = await getYoutubeStats();
+
+  return NextResponse.json(response);
+}

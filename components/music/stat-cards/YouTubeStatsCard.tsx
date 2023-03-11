@@ -2,27 +2,18 @@
 
 import Divider from "components/Divider";
 import { manrope, poppins } from "lib/util/get-class";
-import React, { useEffect, useState } from "react";
 import { FaYoutube } from "react-icons/fa";
-import { getYoutubeStats } from "lib/util/get-youtube-stats";
 import { YouTubeChannelResponse } from "types/youtube";
 import SkeletonCard from "./SkeletonCard";
+import useSWR from "swr";
+import { fetcher } from "lib/util/fetcher";
 import Link from "next/link";
 import clsx from "clsx";
 
 type Props = {};
 
 const YouTubeStatsCard = (props: Props) => {
-  const [data, setData] = useState<YouTubeChannelResponse>();
-
-  useEffect(() => {
-    async function setResponse() {
-      const response = await getYoutubeStats();
-      setData(response);
-    }
-
-    setResponse();
-  }, []);
+  const { data } = useSWR<YouTubeChannelResponse>("/api/get-yt-stats", fetcher);
 
   return (
     <>
