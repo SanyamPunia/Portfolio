@@ -6,9 +6,11 @@ import { fetcher } from "lib/util/fetcher";
 import clsx from "clsx";
 
 const Spotify = () => {
-  const { data } = useSWR<SpotifyDataType>("/api/spotify", fetcher, {
-    refreshInterval: 100,
+  const { data } = useSWR<SpotifyDataType>("/api/get-now-playing", fetcher, {
+    refreshInterval: 1000,
   });
+
+  console.log(data);
 
   return (
     <div

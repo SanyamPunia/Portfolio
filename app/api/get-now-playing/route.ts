@@ -1,5 +1,6 @@
 import axios from "axios";
 import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import querystring from "querystring";
 import { SpotifyApiDataType } from "types/spotify";
 
@@ -41,41 +42,36 @@ export const getNowPlaying = async () => {
   });
 };
 
-export default async function spotify(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method === "GET") {
-    const response = await getNowPlaying();
+export async function GET() {
+  const response = await getNowPlaying();
+  let res = NextResponse.next();
 
-
-    if (
-      response.status === 204 ||
-      response.status > 400 ||
-      response.data.currently_playing_type !== "track"
-    ) {
-      res.setHeader(
-        "Cache-Control",
-        "public, s-maxage=180, stale-while-revalidate=90"        
-      );
-      return res.status(200).json({ isPlaying: false });
-    }
-
-    const data = {
-      isPlaying: response.data.is_playing,
-      title: response.data.item.name,
-      album: response.data.item.album.name,
-      artist: response.data.item.album.artists
-        .map((artist) => artist.name)
-        .join(", "),
-      albumImageUrl: response.data.item.album.images[0].url,
-      songUrl: response.data.item.external_urls.spotify,
-    };
-
-    res.setHeader(
+  if (
+    response.status === 204 ||
+    response.status > 400 ||
+    response.data.currently_playing_type !== "track"
+  ) {
+    res.cookies.set(
       "Cache-Control",
       "public, s-maxage=180, stale-while-revalidate=90"
     );
-    return res.status(200).json(data);
+    return NextResponse.json({ isPlaying: false });
   }
+
+  const data = {
+    isPlaying: response.data.is_playing,
+    title: response.data.item.name,
+    album: response.data.item.album.name,
+    artist: response.data.item.album.artists
+      .map((artist) => artist.name)
+      .join(", "),
+    albumImageUrl: response.data.item.album.images[0].url,
+    songUrl: response.data.item.external_urls.spotify,
+  };
+
+  res.cookies.set(
+    "Cache-Control",
+    "public, s-maxage=180, stale-while-revalidate=90"
+  );
+  return NextResponse.json(data);
 }

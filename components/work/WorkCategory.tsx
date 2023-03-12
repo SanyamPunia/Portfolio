@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Fragment } from "react";
 import Experience from "./experience/Experience";
 import Project from "./projects/Project";
 import { manrope } from "lib/util/get-class";
@@ -21,7 +21,7 @@ const WorkCategory = (props: Props) => {
         className={`text-lg flex gap-4 text-secondary-white ${manrope} mb-8 justify-center`}
       >
         {categoryArray.map((c, index) => (
-          <>
+          <Fragment key={index}>
             <p
               key={index}
               className={clsx(
@@ -51,7 +51,7 @@ const WorkCategory = (props: Props) => {
             >
               •
             </span>
-          </>
+          </Fragment>
         ))}
       </div>
       {category === "Project" ? <Project /> : <Experience />}
