@@ -7,13 +7,7 @@ type Props = {};
 const Hero = (props: Props) => {
   return (
     <div className="text-secondary-white mb-20">
-      <div
-        className={clsx(
-          manrope,
-          "space-y-12",
-          "text-hero-primary-para",
-        )}
-      >
+      <div className={clsx(manrope, "space-y-12", "text-hero-primary-para")}>
         <p className="leading-normal tracking-wide">
           <span className="text-4xl">Hi</span> there! My name is{" "}
           <span style={{ fontWeight: 700 }}>Sanyam</span>, and welcome to my
@@ -41,6 +35,7 @@ const Hero = (props: Props) => {
             height={1000}
             alt="main-image"
             draggable="false"
+            quality={100}
           />
           <p className="mt-1 text-center">
             <span className={"text-stone-500 text-sm"}>A picture of me 😁</span>{" "}
