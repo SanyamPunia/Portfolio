@@ -1,7 +1,7 @@
 import Footer from "components/Footer";
 import Header from "components/Header";
 import "app/globals.css";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 import { AnalyticsWrapper } from "./components/analytics";
 
 export const metadata: Metadata = {

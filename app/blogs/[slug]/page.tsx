@@ -9,7 +9,7 @@ import rehypeHighlight from "rehype-highlight/lib";
 import Divider from "components/Divider";
 import BlogHeader from "components/blogs/mdx/BlogHeader";
 import clsx from "clsx";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export async function generateMetadata({
   params,

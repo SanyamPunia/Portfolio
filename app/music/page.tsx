@@ -2,7 +2,7 @@ import Divider from "components/Divider";
 import React from "react";
 import PageWrapper from "components/PageWrapper";
 import Hero from "components/music/Hero";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Music",

@@ -44,3 +44,7 @@ Remove all of my personal information/content before using it as a template. Fee
   - Using `title-templates` to suffix title.
   - Add `experience` tab (state) inside the `work` route
   - Integrate [`Vercel Analytics`](https://vercel.com/docs/concepts/analytics) for gathering portfolio stats such as number of visitors & web vitals data.
+  - Migrate `api` routes from `pages/api` to `app/api`
+    * `get-artist`
+    * `get-now-playing`
+    * `get-yt-stats`

@@ -1,7 +1,7 @@
 import Divider from "components/Divider";
 import PageWrapper from "components/PageWrapper";
 import Hero from "components/work/Hero";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 import WorkCategory from "components/work/WorkCategory";
 
 export const metadata: Metadata = {

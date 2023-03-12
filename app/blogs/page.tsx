@@ -3,7 +3,7 @@ import PageWrapper from "components/PageWrapper";
 import { getBlogs } from "lib/util/hygraph";
 import Hero from "components/blogs/Hero";
 import FilteredBlogs from "components/blogs/FilteredBlogs";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blogs",
