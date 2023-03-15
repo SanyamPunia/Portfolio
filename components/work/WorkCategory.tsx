@@ -34,7 +34,7 @@ const WorkCategory = (props: Props) => {
             >
               {c === category && (
                 <motion.span
-                  layoutId="underline"
+                  layoutId="underline-wc"
                   className={clsx(
                     "absolute left-0 top-full block",
                     "bg-primary-gray-highlighted",
