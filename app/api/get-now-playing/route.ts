@@ -1,5 +1,4 @@
 import axios from "axios";
-import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 import querystring from "querystring";
 import { SpotifyApiDataType } from "types/spotify";
@@ -51,7 +50,7 @@ export async function GET() {
     response.status > 400 ||
     response.data.currently_playing_type !== "track"
   ) {
-    res.cookies.set(
+    res.headers.set(
       "Cache-Control",
       "public, s-maxage=180, stale-while-revalidate=90"
     );
@@ -69,7 +68,7 @@ export async function GET() {
     songUrl: response.data.item.external_urls.spotify,
   };
 
-  res.cookies.set(
+  res.headers.set(
     "Cache-Control",
     "public, s-maxage=180, stale-while-revalidate=90"
   );
