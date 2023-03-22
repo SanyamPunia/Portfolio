@@ -10,9 +10,6 @@ const Spotify = () => {
     refreshInterval: 1000,
   });
 
-  console.log(data);
-  
-
   return (
     <div
       className={clsx(
