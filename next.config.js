@@ -1,3 +1,11 @@
+const buildRedirect = (source, destination, permanent = true) => {
+  return {
+    source,
+    destination,
+    permanent,
+  };
+};
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -5,6 +13,10 @@ const nextConfig = {
   },
   images: {
     domains: ["cdn.sanity.io", "media.graphassets.com"],
+  },
+
+  async redirects() {
+    return [buildRedirect("/resume", "/share/sanyam_cv.pdf")];
   },
 };
 

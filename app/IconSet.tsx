@@ -36,7 +36,7 @@ export const icons: IconObjctType[] = [
   },
   {
     component: FaFilePdf,
-    href: "https://drive.google.com/file/d/1a1zZeIBVPh2lKD_VDyHDkTzuj0Q2H8Bt/view?usp=sharing",
+    href: "/resume",
     className:
       "hover:bg-gradient-to-r hover:from-emerald-500 hover:to-lime-600",
   },
