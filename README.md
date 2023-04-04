@@ -48,3 +48,4 @@ Remove all of my personal information/content before using it as a template. Fee
     * `get-artist`
     * `get-now-playing`
     * `get-yt-stats`
+  - Share static PDF using `buildRedirect` inside `async redirects()`
