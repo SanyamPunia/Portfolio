@@ -8,7 +8,7 @@ export const getBlogs = async () => {
   );
   const QUERY = gql`
     {
-      portfolioBlogs(orderBy: publishedAt_DESC) {
+      portfolioBlogs(orderBy: publishedAt_DESC, stage: PUBLISHED) {
         title
         coverImage {
           url
@@ -35,7 +35,7 @@ export const getBlog = async (slug: string) => {
   );
   const QUERY = gql`
     query getBlog($slug: String) {
-      portfolioBlogs(where: { slug: $slug }) {
+      portfolioBlogs(where: { slug: $slug }, stage: PUBLISHED) {
         title
         coverImage {
           url
