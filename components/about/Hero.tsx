@@ -24,7 +24,7 @@ const Hero = (props: Props) => {
         </p>
         <div className="w-full">
           <Image
-            src="/assets/main-image-2.png"
+            src="/assets/hero-main.jpg"
             className={clsx(
               "select-none",
               "rounded-md",

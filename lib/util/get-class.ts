@@ -1,4 +1,4 @@
-import { Manrope, Poppins } from "@next/font/google";
+import { Manrope, Poppins } from "next/font/google";
 
 const fontManrope = Manrope({
   weight: ["700", "500"],

@@ -3,6 +3,19 @@ import { ExperienceType } from "types/experience";
 export const experienceList: ExperienceType[] = [
   {
     id: 1,
+    name: "Zenduty",
+    role: "Frontend Engineer Intern",
+    startDate: "June, 2023",
+    endDate: "July, 2023",
+    source: "https://www.zenduty.com/",
+    description: [
+      "Developing UI components, conducting unit & E2E testing, and maintaining code. Collaborating with design and product teams to deliver seamless user experiences.",
+      "Contributing to front-end architecture and continuous improvement initiatives.",
+    ],
+    techStack: ["Cypress", "Vitest", "React", "Gatsby"],
+  },
+  {
+    id: 2,
     name: "BuildFast",
     role: "Frontend Developer Intern",
     startDate: "Feb, 2023",
@@ -15,7 +28,7 @@ export const experienceList: ExperienceType[] = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Figma"],
   },
   {
-    id: 2,
+    id: 3,
     name: "Google Code-In 2018",
     role: "Participant | Finalist",
     startDate: "Oct, 2018",
