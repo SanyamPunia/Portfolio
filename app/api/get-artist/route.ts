@@ -31,7 +31,7 @@ const getAccessToken = async () => {
   return res.data.access_token;
 };
 
-export const getArtist = async () => {
+const getArtist = async () => {
   const access_token: string = await getAccessToken();
   const artistId: string = ARTIST_ID;
 
