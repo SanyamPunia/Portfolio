@@ -52,5 +52,5 @@ Remove all of my personal information/content before using it as a template. Fee
 
 - **Next.js** (v13.2 → v13.4)
 
-  - Migrate from @next/font to next/font using [Codemon](https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#132)
+  - Migrate from `@next/font` to `next/font` using [`Codemon`](https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#132)
   - Minor UI upgrade
