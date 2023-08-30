@@ -1,0 +1,39 @@
+.line {
+  width: 3px;
+  height: 3px;
+  margin-right: 3px;
+  background: #1db954;
+  border-radius: 1.5px;
+}
+
+.line1 {
+  animation: playing 0.85s infinite ease;
+}
+
+.line2 {
+  animation: playing 1.26s infinite ease;
+}
+
+.line3 {
+  animation: playing 0.62s infinite ease;
+}
+
+.music {
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+@keyframes playing {
+  0% {
+    height: 3px;
+  }
+  50% {
+    height: 12px;
+  }
+  to {
+    height: 3px;
+  }
+}

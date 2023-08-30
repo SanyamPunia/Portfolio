@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { SpotifyDataType } from "types/spotify";
 import { fetcher } from "lib/util/fetcher";
 import clsx from "clsx";
+import styles from "styles/music.module.css";
 
 const Spotify = () => {
   const { data } = useSWR<SpotifyDataType>("/api/get-now-playing", fetcher, {
@@ -31,20 +32,27 @@ const Spotify = () => {
         <div className="flex gap-1 text-primary-gray">
           <p>
             {data?.isPlaying ? (
-              <>
-                <span
-                  className={clsx(
-                    "cursor-pointer",
-                    "transition hover:text-primary-gray-highlighted",
-                    "underline underline-offset-2"
-                  )}
-                >
-                  <a target="_blank" rel="noreferrer" href={data?.songUrl}>
-                    {data?.title}
-                  </a>
-                </span>{" "}
-                by {data?.artist}{" "}
-              </>
+              <div className="flex items-center gap-2">
+                <div>
+                  <span
+                    className={clsx(
+                      "cursor-pointer",
+                      "transition hover:text-primary-gray-highlighted",
+                      "underline underline-offset-2"
+                    )}
+                  >
+                    <a target="_blank" rel="noreferrer" href={data?.songUrl}>
+                      {data?.title}
+                    </a>
+                  </span>{" "}
+                  by {data?.artist}{" "}
+                </div>
+                <div className={styles.music}>
+                  <div className={clsx(styles.line, styles.line1)} />
+                  <div className={clsx(styles.line, styles.line2)} />
+                  <div className={clsx(styles.line, styles.line3)} />
+                </div>
+              </div>
             ) : (
               <>Spotify</>
             )}
