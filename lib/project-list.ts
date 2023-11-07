@@ -3,6 +3,17 @@ import { ProjectType } from "types/project";
 export const projectList: ProjectType[] = [
   {
     id: 1,
+    name: "Flib",
+    description:
+      "Flib transforms your branding and gifting with custom merchandise that suits your vision. Whether you're a business, event planner, or individual, Flib has you covered.",
+    tags: ["Next,js", "TypeScript", "Caisy CMS", "Jotai"],
+    bgImage: "flib-preview",
+    logoImage: "flib-logo",
+    githubUrl: "#",
+    previewUrl: "https://flib.store/",
+  },
+  {
+    id: 2,
     name: "Skill Up NCU",
     description:
       "Skill Up NCU is an online forum built for the university student community to ask doubts from their peers and seniors. With a rich markdown editor, with image support, ask your question and post it within a matter of seconds.",
@@ -13,7 +24,7 @@ export const projectList: ProjectType[] = [
     previewUrl: "https://skillup-ncu.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     name: "Gym Landing Page",
     description:
       "A clean and responsive landing page made for a GYM using VITE and animated using Framer Motion. Deployed using Cloudfare.",
@@ -24,7 +35,7 @@ export const projectList: ProjectType[] = [
     previewUrl: "https://6ed9fd44.gym-landing-page.pages.dev/",
   },
   {
-    id: 3,
+    id: 4,
     name: "Supa Radio",
     description:
       "An Interactive Music Visualizer created using Supabase & Hosted via Firebase. Key features include Supabase Auth, Database, Storage, & Realtime Chat.",
@@ -33,16 +44,5 @@ export const projectList: ProjectType[] = [
     logoImage: "suparadio-logo",
     githubUrl: "https://github.com/SanyamPunia/Supa-Radio",
     previewUrl: "https://suparadio-viz.web.app/",
-  },
-  {
-    id: 4,
-    name: "Next Blog",
-    description:
-      "Inspired by popular blogging web apps, Next Blog is a comprehensive blog publishing website made using Next JS and Firebase. It includes key features such as liking, image uploading, and admin route.",
-    tags: ["Next.js", "Firebase", "Authentication"],
-    bgImage: "nextblog-preview",
-    logoImage: "nextblog-logo",
-    githubUrl: "https://github.com/SanyamPunia/next-blog",
-    previewUrl: "https://next-blog-app-virid.vercel.app/",
   },
 ];
