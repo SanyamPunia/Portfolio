@@ -2,6 +2,19 @@ import { ExperienceType } from "types/experience";
 
 export const experienceList: ExperienceType[] = [
   {
+    id: 2,
+    name: "Flib",
+    role: "Founder | Developer",
+    startDate: "May, 2023",
+    endDate: "~",
+    source: "https://flib.store",
+    description: [
+      "As the founder of Flib, I drew inspiration from industry leaders like SwagUp. Inspired by their success, I envisioned a platform that would excel in providing top-quality custom merchandise and swag solutions. I took the initiative to create our main website, assemble a dedicated team, and cultivate valuable partnerships.",
+      "At Flib, we're passionate about transforming your ideas into innovative custom merchandise and unforgettable swag experiences. Thank you for being part of our journey as we craft exceptional merchandise solutions tailored to your vision.",
+    ],
+    techStack: ["Next,js", "TypeScript", "Caisy CMS", "Jotai"],
+  },
+  {
     id: 1,
     name: "Zenduty",
     role: "Frontend Engineer Intern",
