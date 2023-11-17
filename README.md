@@ -45,12 +45,14 @@ Remove all of my personal information/content before using it as a template. Fee
   - Add `experience` tab (state) inside the `work` route
   - Integrate [`Vercel Analytics`](https://vercel.com/docs/concepts/analytics) for gathering portfolio stats such as number of visitors & web vitals data.
   - Migrate `api` routes from `pages/api` to `app/api`
-    * `get-artist`
-    * `get-now-playing`
-    * `get-yt-stats`
+    - `get-artist`
+    - `get-now-playing`
+    - `get-yt-stats`
   - Share static PDF using `buildRedirect` inside `async redirects()`
 
 - **Next.js** (v13.2 → v13.4)
 
   - Migrate from `@next/font` to `next/font` using [`Codemon`](https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#132)
   - Minor UI upgrade
+
+- **Next.js** (v13.4 → v14.0)
